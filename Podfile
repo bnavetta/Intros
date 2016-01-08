@@ -10,6 +10,7 @@ plugin 'cocoapods-keys', {
 
 pod 'RxSwift'
 pod 'Protobuf', '~> 3.0.0-alpha-3'
+pod 'FileKit', '~> 2.0.0'
 
 target 'IntrosTests' do
 

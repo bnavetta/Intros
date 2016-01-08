@@ -17,6 +17,8 @@
 		B5389BCA1C3F68C800EA15D5 /* IntrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BC91C3F68C800EA15D5 /* IntrosUITests.swift */; };
 		B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */; };
+		B5BFA7D51C4020BB00048621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D41C4020BB00048621 /* User.swift */; };
+		B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D71C4021BD00048621 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		B5389BD91C3F700A00EA15D5 /* Intros.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.pbobjc.h; path = "proto-generated/Intros.pbobjc.h"; sourceTree = SOURCE_ROOT; };
 		B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.pbobjc.m; path = "proto-generated/Intros.pbobjc.m"; sourceTree = SOURCE_ROOT; };
 		B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCaptureViewController.swift; sourceTree = "<group>"; };
+		B5BFA7D41C4020BB00048621 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B5BFA7D71C4021BD00048621 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 		B5389BA81C3F68C800EA15D5 /* Intros */ = {
 			isa = PBXGroup;
 			children = (
+				B5BFA7D61C4021B400048621 /* Services */,
+				B5BFA7D31C4020BB00048621 /* Models */,
 				B5389BA91C3F68C800EA15D5 /* AppDelegate.swift */,
 				B5389BAB1C3F68C800EA15D5 /* ViewController.swift */,
 				B5389BAD1C3F68C800EA15D5 /* Main.storyboard */,
@@ -156,6 +162,22 @@
 				B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */,
 			);
 			name = "Protocol Buffers";
+			sourceTree = "<group>";
+		};
+		B5BFA7D31C4020BB00048621 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5BFA7D41C4020BB00048621 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B5BFA7D61C4021B400048621 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5BFA7D71C4021BD00048621 /* UserManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E8DF79D2839C2BED9375C0CF /* Pods */ = {
@@ -352,9 +374,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */,
 				B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */,
 				B5389BAC1C3F68C800EA15D5 /* ViewController.swift in Sources */,
 				B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */,
+				B5BFA7D51C4020BB00048621 /* User.swift in Sources */,
 				B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
