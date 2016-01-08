@@ -30,12 +30,19 @@ class ViewController: UIViewController {
         
         if let qrCode = createQRCode(user) {
             imageView.image = createNonInterpolatedUIImageFromCIImage(qrCode, scale: 2 * UIScreen.mainScreen().scale);
+            imageView.sizeToFit();
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction
+    func startScanning(sender: AnyObject) {
+        do {
+            let scannerVC = try QRCaptureViewController.withDefaultDevice();
+            presentViewController(scannerVC, animated: true, completion: nil);
+        }
+        catch let e {
+            print(e);
+        }
     }
     
     // https://github.com/ShinobiControls/iOS7-day-by-day/blob/master/15-core-image-filters/15-core-image-filters.md

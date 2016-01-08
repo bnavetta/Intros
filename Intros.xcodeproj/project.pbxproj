@@ -16,6 +16,7 @@
 		B5389BBF1C3F68C800EA15D5 /* IntrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BBE1C3F68C800EA15D5 /* IntrosTests.swift */; };
 		B5389BCA1C3F68C800EA15D5 /* IntrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BC91C3F68C800EA15D5 /* IntrosUITests.swift */; };
 		B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B5389BD81C3F700900EA15D5 /* Intros-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Intros-Bridging-Header.h"; sourceTree = "<group>"; };
 		B5389BD91C3F700A00EA15D5 /* Intros.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.pbobjc.h; path = "proto-generated/Intros.pbobjc.h"; sourceTree = SOURCE_ROOT; };
 		B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.pbobjc.m; path = "proto-generated/Intros.pbobjc.m"; sourceTree = SOURCE_ROOT; };
+		B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCaptureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				B5389BB51C3F68C800EA15D5 /* Info.plist */,
 				B5389BD81C3F700900EA15D5 /* Intros-Bridging-Header.h */,
 				B5389BD71C3F6FEE00EA15D5 /* Protocol Buffers */,
+				B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */,
 			);
 			path = Intros;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			files = (
 				B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */,
 				B5389BAC1C3F68C800EA15D5 /* ViewController.swift in Sources */,
+				B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */,
 				B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,11 +20,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-5V-KU0">
                                 <rect key="frame" x="225" y="225" width="150" height="150"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV2-ro-9gc">
+                                <rect key="frame" x="283" y="383" width="35" height="30"/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <action selector="startScanning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mV-56-k8F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XV8-5V-KU0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0bt-p7-IQE"/>
+                            <constraint firstItem="kV2-ro-9gc" firstAttribute="top" secondItem="XV8-5V-KU0" secondAttribute="top" id="9YA-1W-VDe"/>
                             <constraint firstItem="XV8-5V-KU0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EYV-ju-nEl"/>
+                            <constraint firstItem="kV2-ro-9gc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ytl-MO-7N1"/>
                         </constraints>
                     </view>
                     <connections>
