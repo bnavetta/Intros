@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import CleanroomLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    override init() {
+        Log.enable();
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        Log.info?.message("App launched");
+        
         // Override point for customization after application launch.
+        
+        let navigationController = UINavigationController();
+        window?.rootViewController = navigationController;
+        
+        let router = NavigationControllerRouter(navigationController: navigationController);
+        router.goTo(TestRoute());
         
         return true
     }
