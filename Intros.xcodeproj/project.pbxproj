@@ -15,6 +15,7 @@
 		B5389BB41C3F68C800EA15D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5389BB21C3F68C800EA15D5 /* LaunchScreen.storyboard */; };
 		B5389BBF1C3F68C800EA15D5 /* IntrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BBE1C3F68C800EA15D5 /* IntrosTests.swift */; };
 		B5389BCA1C3F68C800EA15D5 /* IntrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BC91C3F68C800EA15D5 /* IntrosUITests.swift */; };
+		B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		B5389BC51C3F68C800EA15D5 /* IntrosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntrosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5389BC91C3F68C800EA15D5 /* IntrosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrosUITests.swift; sourceTree = "<group>"; };
 		B5389BCB1C3F68C800EA15D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5389BD81C3F700900EA15D5 /* Intros-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Intros-Bridging-Header.h"; sourceTree = "<group>"; };
+		B5389BD91C3F700A00EA15D5 /* Intros.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.pbobjc.h; path = "proto-generated/Intros.pbobjc.h"; sourceTree = SOURCE_ROOT; };
+		B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.pbobjc.m; path = "proto-generated/Intros.pbobjc.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				B5389BB01C3F68C800EA15D5 /* Assets.xcassets */,
 				B5389BB21C3F68C800EA15D5 /* LaunchScreen.storyboard */,
 				B5389BB51C3F68C800EA15D5 /* Info.plist */,
+				B5389BD81C3F700900EA15D5 /* Intros-Bridging-Header.h */,
+				B5389BD71C3F6FEE00EA15D5 /* Protocol Buffers */,
 			);
 			path = Intros;
 			sourceTree = "<group>";
@@ -138,6 +144,15 @@
 				B5389BCB1C3F68C800EA15D5 /* Info.plist */,
 			);
 			path = IntrosUITests;
+			sourceTree = "<group>";
+		};
+		B5389BD71C3F6FEE00EA15D5 /* Protocol Buffers */ = {
+			isa = PBXGroup;
+			children = (
+				B5389BD91C3F700A00EA15D5 /* Intros.pbobjc.h */,
+				B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */,
+			);
+			name = "Protocol Buffers";
 			sourceTree = "<group>";
 		};
 		E8DF79D2839C2BED9375C0CF /* Pods */ = {
@@ -334,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */,
 				B5389BAC1C3F68C800EA15D5 /* ViewController.swift in Sources */,
 				B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */,
 			);
@@ -478,10 +494,17 @@
 			baseConfigurationReference = 1E3404BAD1A036411C09271C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/Pods/Protobuf/objectivec",
+				);
 				INFOPLIST_FILE = Intros/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bennavetta.Intros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Intros/Intros-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -490,10 +513,16 @@
 			baseConfigurationReference = A64911624BC53E5F270C9389 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/Pods/Protobuf/objectivec",
+				);
 				INFOPLIST_FILE = Intros/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bennavetta.Intros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Intros/Intros-Bridging-Header.h";
 			};
 			name = Release;
 		};

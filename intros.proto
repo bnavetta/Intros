@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option objc_class_prefix = "BNI";
+
+message User {
+	string first_name = 1;
+	string last_name = 2;
+	string phone_number = 3;
+	string facebook = 4;
+	string snapchat = 5;
+	string twitter = 6;
+}
