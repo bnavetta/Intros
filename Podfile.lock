@@ -1,0 +1,20 @@
+PODS:
+  - Keys (1.0.0)
+  - Protobuf (3.0.0-beta-2)
+  - RxSwift (2.0.0)
+
+DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - Protobuf (~> 3.0.0-alpha-3)
+  - RxSwift
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+SPEC CHECKSUMS:
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  Protobuf: f6e2be538e98cf00d9c00b276a32b7995b1f0328
+  RxSwift: d83246efa6f16c50c143bec134649d045498f601
+
+COCOAPODS: 0.39.0
