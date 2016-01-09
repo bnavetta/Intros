@@ -8,6 +8,7 @@
 
 import UIKit
 import CleanroomLogger
+import NSObject_Rx
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController;
         
         let router = NavigationControllerRouter(navigationController: navigationController);
-        router.goTo(TestRoute());
+        router.goTo(PrepareIntroduction());
         
         return true
     }

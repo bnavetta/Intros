@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ahr-Jv-RB4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Prepare Introduction View Controller-->
+        <scene sceneID="p3f-XN-flS">
+            <objects>
+                <viewController storyboardIdentifier="PrepareIntroductionVC" id="ahr-Jv-RB4" customClass="PrepareIntroductionViewController" customModule="Intros" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WEB-Jk-h3u"/>
+                        <viewControllerLayoutGuide type="bottom" id="DyI-Cb-KaI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smT-WC-oef">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9mO-F5-XPV">
+                                <rect key="frame" x="32" y="32" width="536" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9mO-F5-XPV" firstAttribute="top" secondItem="WEB-Jk-h3u" secondAttribute="bottom" constant="12" id="CLI-fe-kkl"/>
+                            <constraint firstItem="DyI-Cb-KaI" firstAttribute="top" secondItem="9mO-F5-XPV" secondAttribute="bottom" constant="40" id="Fyj-Wn-mfY"/>
+                            <constraint firstItem="9mO-F5-XPV" firstAttribute="leading" secondItem="smT-WC-oef" secondAttribute="leadingMargin" constant="12" id="ihx-mJ-hfy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9mO-F5-XPV" secondAttribute="trailing" constant="12" id="r8d-sT-eFq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sharingTable" destination="9mO-F5-XPV" id="16Q-3j-1dI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MN9-FF-DeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="271"/>
+        </scene>
+    </scenes>
+</document>

@@ -21,8 +21,14 @@
 		B58F9AD01C403E0C000E95A5 /* CleanroomASL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B58F9AD11C403E0C000E95A5 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */; };
 		B58F9AD21C403E0C000E95A5 /* CleanroomLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B58F9AD71C403F76000E95A5 /* PrepareIntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9AD61C403F76000E95A5 /* PrepareIntroductionViewModel.swift */; };
+		B58F9ADC1C40487D000E95A5 /* PrepareIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9ADB1C40487D000E95A5 /* PrepareIntroductionViewController.swift */; };
 		B5975C4D1C403A6A005F8313 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5975C4C1C403A6A005F8313 /* Router.swift */; };
 		B5975C4F1C403A73005F8313 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5975C4E1C403A73005F8313 /* Routes.swift */; };
+		B597DCC31C41A80A00601CB1 /* Introduce.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B597DCC21C41A80A00601CB1 /* Introduce.storyboard */; };
+		B597DCC51C41AA5000601CB1 /* BEMCheckBox+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCC41C41AA5000601CB1 /* BEMCheckBox+Rx.swift */; };
+		B597DCC71C41B14E00601CB1 /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B597DCC61C41B14E00601CB1 /* ShareTableViewCell.xib */; };
+		B597DCC91C41C17500601CB1 /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCC81C41C17500601CB1 /* DataBinding.swift */; };
 		B5BFA7D51C4020BB00048621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D41C4020BB00048621 /* User.swift */; };
 		B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D71C4021BD00048621 /* UserManager.swift */; };
 /* End PBXBuildFile section */
@@ -82,8 +88,14 @@
 		B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCaptureViewController.swift; sourceTree = "<group>"; };
 		B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomASL.framework; path = Carthage/Build/iOS/CleanroomASL.framework; sourceTree = "<group>"; };
 		B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
+		B58F9AD61C403F76000E95A5 /* PrepareIntroductionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareIntroductionViewModel.swift; sourceTree = "<group>"; };
+		B58F9ADB1C40487D000E95A5 /* PrepareIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareIntroductionViewController.swift; sourceTree = "<group>"; };
 		B5975C4C1C403A6A005F8313 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B5975C4E1C403A73005F8313 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		B597DCC21C41A80A00601CB1 /* Introduce.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Introduce.storyboard; sourceTree = "<group>"; };
+		B597DCC41C41AA5000601CB1 /* BEMCheckBox+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BEMCheckBox+Rx.swift"; sourceTree = "<group>"; };
+		B597DCC61C41B14E00601CB1 /* ShareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareTableViewCell.xib; sourceTree = "<group>"; };
+		B597DCC81C41C17500601CB1 /* DataBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
 		B5BFA7D41C4020BB00048621 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5BFA7D71C4021BD00048621 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +163,8 @@
 		B5389BA81C3F68C800EA15D5 /* Intros */ = {
 			isa = PBXGroup;
 			children = (
+				B58F9AD81C404496000E95A5 /* Extensions */,
+				B58F9AD51C403F5E000E95A5 /* Pages */,
 				B5975C4B1C403A32005F8313 /* Navigation */,
 				B5BFA7D61C4021B400048621 /* Services */,
 				B5BFA7D31C4020BB00048621 /* Models */,
@@ -192,6 +206,34 @@
 				B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */,
 			);
 			name = "Protocol Buffers";
+			sourceTree = "<group>";
+		};
+		B58F9AD41C403F56000E95A5 /* Introduce */ = {
+			isa = PBXGroup;
+			children = (
+				B58F9AD61C403F76000E95A5 /* PrepareIntroductionViewModel.swift */,
+				B58F9ADB1C40487D000E95A5 /* PrepareIntroductionViewController.swift */,
+				B597DCC21C41A80A00601CB1 /* Introduce.storyboard */,
+				B597DCC61C41B14E00601CB1 /* ShareTableViewCell.xib */,
+			);
+			path = Introduce;
+			sourceTree = "<group>";
+		};
+		B58F9AD51C403F5E000E95A5 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				B58F9AD41C403F56000E95A5 /* Introduce */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		B58F9AD81C404496000E95A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B597DCC41C41AA5000601CB1 /* BEMCheckBox+Rx.swift */,
+				B597DCC81C41C17500601CB1 /* DataBinding.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B5975C4B1C403A32005F8313 /* Navigation */ = {
@@ -340,6 +382,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B597DCC31C41A80A00601CB1 /* Introduce.storyboard in Resources */,
+				B597DCC71C41B14E00601CB1 /* ShareTableViewCell.xib in Resources */,
 				B5389BB41C3F68C800EA15D5 /* LaunchScreen.storyboard in Resources */,
 				B5389BB11C3F68C800EA15D5 /* Assets.xcassets in Resources */,
 				B5389BAF1C3F68C800EA15D5 /* Main.storyboard in Resources */,
@@ -428,10 +472,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B58F9ADC1C40487D000E95A5 /* PrepareIntroductionViewController.swift in Sources */,
+				B597DCC91C41C17500601CB1 /* DataBinding.swift in Sources */,
 				B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */,
 				B5975C4F1C403A73005F8313 /* Routes.swift in Sources */,
+				B58F9AD71C403F76000E95A5 /* PrepareIntroductionViewModel.swift in Sources */,
 				B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */,
 				B5389BAC1C3F68C800EA15D5 /* ViewController.swift in Sources */,
+				B597DCC51C41AA5000601CB1 /* BEMCheckBox+Rx.swift in Sources */,
 				B5975C4D1C403A6A005F8313 /* Router.swift in Sources */,
 				B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */,
 				B5BFA7D51C4020BB00048621 /* User.swift in Sources */,

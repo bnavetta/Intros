@@ -3,3 +3,4 @@
 //
 
 #import "Intros.pbobjc.h"
+@import JTMaterialSwitch;

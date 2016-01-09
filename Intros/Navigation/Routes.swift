@@ -9,3 +9,5 @@
 import Foundation
 
 struct TestRoute: RoutingKey {}
+
+struct PrepareIntroduction: RoutingKey {}

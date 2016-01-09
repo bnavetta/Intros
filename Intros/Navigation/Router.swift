@@ -26,6 +26,10 @@ final class NavigationControllerRouter: Router {
         if let _ = key as? TestRoute {
             return UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("viewController");
         }
+        else if let _ = key as? PrepareIntroduction {
+            let viewModel = PrepareIntroductionViewModelType();
+            return PrepareIntroductionViewController.instantiate(viewModel);
+        }
         
         fatalError("Unknown route: \(key)");
     }
