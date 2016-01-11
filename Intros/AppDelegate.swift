@@ -7,29 +7,50 @@
 //
 
 import UIKit
+import RxSwift
 import CleanroomLogger
 import NSObject_Rx
 
+class HelloPage: Page {
+    func createViewController() -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("hello")
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     
+    let userManager = UserManagerImpl()
+    
     override init() {
-        Log.enable();
+        if AppSetup.devMode {
+            Log.enable(.Debug, synchronousMode: true)
+        }
+        else {
+            Log.enable()
+        }
     }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Log.info?.message("App launched");
         
-        // Override point for customization after application launch.
+        let user = User(firstName: "Ben", lastName: "Navetta", phoneNumber: "9783023343", facebookId: "100001646049061", snapchatUsername: "ben.navetta", twitterHandle: "")
+        userManager.saveUser(user, scheduler: MainScheduler.instance)
+            .subscribe()
+            .addDisposableTo(rx_disposeBag)
+
         
-        let navigationController = UINavigationController();
-        window?.rootViewController = navigationController;
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        let router = NavigationControllerRouter(navigationController: navigationController);
-        router.goTo(PrepareIntroduction());
+        let pagedViewController = PagedViewController(pages: [
+            IntroducePage(), HelloPage()
+            ], initialIndex: 0)
+        window?.rootViewController = pagedViewController
+        
+        window?.makeKeyAndVisible()
         
         return true
     }

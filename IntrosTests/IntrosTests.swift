@@ -21,9 +21,8 @@ class IntrosTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSetup() {
+        XCTAssertTrue(AppSetup.test, "Should be in test mode")
     }
     
     func testPerformanceExample() {

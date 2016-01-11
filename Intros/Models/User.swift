@@ -1,5 +1,19 @@
 import Foundation
 
+enum InformationType: String {
+    case Name = "Name"
+    case PhoneNumber = "PhoneNumber"
+    case Facebook = "Facebook"
+    case Twitter = "Twitter"
+    case Snapchat = "Snapchat"
+    
+    var title: String {
+        return NSLocalizedString(rawValue, comment: "")
+    }
+    
+    static let values: [InformationType] = [.Name, .PhoneNumber, .Facebook, .Twitter, .Snapchat]
+}
+
 struct User {
     let firstName: String
     let lastName: String
@@ -28,5 +42,20 @@ struct User {
         proto.snapchat = snapchatUsername;
         proto.twitter = twitterHandle;
         return proto;
+    }
+    
+    func hasInfo(type: InformationType) -> Bool {
+        switch type {
+        case .Name:
+            return firstName != "" && lastName != ""
+        case .PhoneNumber:
+            return phoneNumber != ""
+        case .Facebook:
+            return facebookId != ""
+        case .Snapchat:
+            return snapchatUsername != ""
+        case .Twitter:
+            return twitterHandle != ""
+        }
     }
 }

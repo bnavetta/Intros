@@ -17,18 +17,25 @@
 		B5389BCA1C3F68C800EA15D5 /* IntrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BC91C3F68C800EA15D5 /* IntrosUITests.swift */; };
 		B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */; };
+		B5749EFC1C4466C20064EBD5 /* AppSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749EFB1C4466C20064EBD5 /* AppSetup.swift */; };
+		B5749EFF1C4469F00064EBD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5749EFD1C4469F00064EBD5 /* Localizable.strings */; };
 		B58F9ACF1C403E0C000E95A5 /* CleanroomASL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */; };
 		B58F9AD01C403E0C000E95A5 /* CleanroomASL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B58F9AD11C403E0C000E95A5 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */; };
 		B58F9AD21C403E0C000E95A5 /* CleanroomLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B58F9AD71C403F76000E95A5 /* PrepareIntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9AD61C403F76000E95A5 /* PrepareIntroductionViewModel.swift */; };
 		B58F9ADC1C40487D000E95A5 /* PrepareIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9ADB1C40487D000E95A5 /* PrepareIntroductionViewController.swift */; };
-		B5975C4D1C403A6A005F8313 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5975C4C1C403A6A005F8313 /* Router.swift */; };
-		B5975C4F1C403A73005F8313 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5975C4E1C403A73005F8313 /* Routes.swift */; };
 		B597DCC31C41A80A00601CB1 /* Introduce.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B597DCC21C41A80A00601CB1 /* Introduce.storyboard */; };
 		B597DCC51C41AA5000601CB1 /* BEMCheckBox+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCC41C41AA5000601CB1 /* BEMCheckBox+Rx.swift */; };
 		B597DCC71C41B14E00601CB1 /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B597DCC61C41B14E00601CB1 /* ShareTableViewCell.xib */; };
 		B597DCC91C41C17500601CB1 /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCC81C41C17500601CB1 /* DataBinding.swift */; };
+		B597DCCB1C41CAB600601CB1 /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCCA1C41CAB600601CB1 /* QRCodeGenerator.swift */; };
+		B597DCCD1C42073B00601CB1 /* IntroducePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCCC1C42073B00601CB1 /* IntroducePage.swift */; };
+		B597DCCF1C4209C700601CB1 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCCE1C4209C700601CB1 /* Page.swift */; };
+		B597DCD11C421F2A00601CB1 /* ConcurrentDispatchQueueScheduler+StandardQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD01C421F2A00601CB1 /* ConcurrentDispatchQueueScheduler+StandardQueues.swift */; };
+		B597DCD31C429A2E00601CB1 /* ObservableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */; };
+		B597DCD51C42B05A00601CB1 /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD41C42B05A00601CB1 /* IntroduceViewController.swift */; };
+		B597DCD91C43583A00601CB1 /* IntroduceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD81C43583A00601CB1 /* IntroduceViewModel.swift */; };
 		B5BFA7D51C4020BB00048621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D41C4020BB00048621 /* User.swift */; };
 		B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D71C4021BD00048621 /* UserManager.swift */; };
 /* End PBXBuildFile section */
@@ -86,16 +93,23 @@
 		B5389BD91C3F700A00EA15D5 /* Intros.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.pbobjc.h; path = "proto-generated/Intros.pbobjc.h"; sourceTree = SOURCE_ROOT; };
 		B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.pbobjc.m; path = "proto-generated/Intros.pbobjc.m"; sourceTree = SOURCE_ROOT; };
 		B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCaptureViewController.swift; sourceTree = "<group>"; };
+		B5749EFB1C4466C20064EBD5 /* AppSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSetup.swift; sourceTree = "<group>"; };
+		B5749EFE1C4469F00064EBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomASL.framework; path = Carthage/Build/iOS/CleanroomASL.framework; sourceTree = "<group>"; };
 		B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		B58F9AD61C403F76000E95A5 /* PrepareIntroductionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareIntroductionViewModel.swift; sourceTree = "<group>"; };
 		B58F9ADB1C40487D000E95A5 /* PrepareIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareIntroductionViewController.swift; sourceTree = "<group>"; };
-		B5975C4C1C403A6A005F8313 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		B5975C4E1C403A73005F8313 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		B597DCC21C41A80A00601CB1 /* Introduce.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Introduce.storyboard; sourceTree = "<group>"; };
 		B597DCC41C41AA5000601CB1 /* BEMCheckBox+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BEMCheckBox+Rx.swift"; sourceTree = "<group>"; };
 		B597DCC61C41B14E00601CB1 /* ShareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareTableViewCell.xib; sourceTree = "<group>"; };
 		B597DCC81C41C17500601CB1 /* DataBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
+		B597DCCA1C41CAB600601CB1 /* QRCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
+		B597DCCC1C42073B00601CB1 /* IntroducePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroducePage.swift; sourceTree = "<group>"; };
+		B597DCCE1C4209C700601CB1 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		B597DCD01C421F2A00601CB1 /* ConcurrentDispatchQueueScheduler+StandardQueues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConcurrentDispatchQueueScheduler+StandardQueues.swift"; sourceTree = "<group>"; };
+		B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableHelpers.swift; sourceTree = "<group>"; };
+		B597DCD41C42B05A00601CB1 /* IntroduceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
+		B597DCD81C43583A00601CB1 /* IntroduceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroduceViewModel.swift; sourceTree = "<group>"; };
 		B5BFA7D41C4020BB00048621 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5BFA7D71C4021BD00048621 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,12 +177,13 @@
 		B5389BA81C3F68C800EA15D5 /* Intros */ = {
 			isa = PBXGroup;
 			children = (
+				B5749F001C4469F50064EBD5 /* I18N */,
 				B58F9AD81C404496000E95A5 /* Extensions */,
 				B58F9AD51C403F5E000E95A5 /* Pages */,
-				B5975C4B1C403A32005F8313 /* Navigation */,
 				B5BFA7D61C4021B400048621 /* Services */,
 				B5BFA7D31C4020BB00048621 /* Models */,
 				B5389BA91C3F68C800EA15D5 /* AppDelegate.swift */,
+				B5749EFB1C4466C20064EBD5 /* AppSetup.swift */,
 				B5389BAB1C3F68C800EA15D5 /* ViewController.swift */,
 				B5389BAD1C3F68C800EA15D5 /* Main.storyboard */,
 				B5389BB01C3F68C800EA15D5 /* Assets.xcassets */,
@@ -208,6 +223,14 @@
 			name = "Protocol Buffers";
 			sourceTree = "<group>";
 		};
+		B5749F001C4469F50064EBD5 /* I18N */ = {
+			isa = PBXGroup;
+			children = (
+				B5749EFD1C4469F00064EBD5 /* Localizable.strings */,
+			);
+			name = I18N;
+			sourceTree = "<group>";
+		};
 		B58F9AD41C403F56000E95A5 /* Introduce */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +238,9 @@
 				B58F9ADB1C40487D000E95A5 /* PrepareIntroductionViewController.swift */,
 				B597DCC21C41A80A00601CB1 /* Introduce.storyboard */,
 				B597DCC61C41B14E00601CB1 /* ShareTableViewCell.xib */,
+				B597DCCC1C42073B00601CB1 /* IntroducePage.swift */,
+				B597DCD41C42B05A00601CB1 /* IntroduceViewController.swift */,
+				B597DCD81C43583A00601CB1 /* IntroduceViewModel.swift */,
 			);
 			path = Introduce;
 			sourceTree = "<group>";
@@ -223,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				B58F9AD41C403F56000E95A5 /* Introduce */,
+				B597DCCE1C4209C700601CB1 /* Page.swift */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -232,17 +259,10 @@
 			children = (
 				B597DCC41C41AA5000601CB1 /* BEMCheckBox+Rx.swift */,
 				B597DCC81C41C17500601CB1 /* DataBinding.swift */,
+				B597DCD01C421F2A00601CB1 /* ConcurrentDispatchQueueScheduler+StandardQueues.swift */,
+				B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B5975C4B1C403A32005F8313 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				B5975C4C1C403A6A005F8313 /* Router.swift */,
-				B5975C4E1C403A73005F8313 /* Routes.swift */,
-			);
-			path = Navigation;
 			sourceTree = "<group>";
 		};
 		B5BFA7D31C4020BB00048621 /* Models */ = {
@@ -257,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				B5BFA7D71C4021BD00048621 /* UserManager.swift */,
+				B597DCCA1C41CAB600601CB1 /* QRCodeGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -383,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B597DCC31C41A80A00601CB1 /* Introduce.storyboard in Resources */,
+				B5749EFF1C4469F00064EBD5 /* Localizable.strings in Resources */,
 				B597DCC71C41B14E00601CB1 /* ShareTableViewCell.xib in Resources */,
 				B5389BB41C3F68C800EA15D5 /* LaunchScreen.storyboard in Resources */,
 				B5389BB11C3F68C800EA15D5 /* Assets.xcassets in Resources */,
@@ -475,15 +497,21 @@
 				B58F9ADC1C40487D000E95A5 /* PrepareIntroductionViewController.swift in Sources */,
 				B597DCC91C41C17500601CB1 /* DataBinding.swift in Sources */,
 				B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */,
-				B5975C4F1C403A73005F8313 /* Routes.swift in Sources */,
 				B58F9AD71C403F76000E95A5 /* PrepareIntroductionViewModel.swift in Sources */,
+				B597DCD51C42B05A00601CB1 /* IntroduceViewController.swift in Sources */,
 				B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */,
 				B5389BAC1C3F68C800EA15D5 /* ViewController.swift in Sources */,
 				B597DCC51C41AA5000601CB1 /* BEMCheckBox+Rx.swift in Sources */,
-				B5975C4D1C403A6A005F8313 /* Router.swift in Sources */,
+				B597DCD11C421F2A00601CB1 /* ConcurrentDispatchQueueScheduler+StandardQueues.swift in Sources */,
+				B597DCCD1C42073B00601CB1 /* IntroducePage.swift in Sources */,
 				B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */,
+				B5749EFC1C4466C20064EBD5 /* AppSetup.swift in Sources */,
 				B5BFA7D51C4020BB00048621 /* User.swift in Sources */,
+				B597DCD91C43583A00601CB1 /* IntroduceViewModel.swift in Sources */,
+				B597DCCB1C41CAB600601CB1 /* QRCodeGenerator.swift in Sources */,
 				B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */,
+				B597DCD31C429A2E00601CB1 /* ObservableHelpers.swift in Sources */,
+				B597DCCF1C4209C700601CB1 /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +563,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		B5749EFD1C4469F00064EBD5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5749EFE1C4469F00064EBD5 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -574,6 +610,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/Pods/Protobuf/objectivec",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -613,6 +653,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/Pods/Protobuf/objectivec",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;

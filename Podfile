@@ -13,6 +13,8 @@ pod 'RxCocoa'
 pod 'Action'
 pod 'NSObject+Rx'
 
+pod 'Swinject'
+
 pod 'Protobuf', '~> 3.0.0-alpha-3'
 pod 'FileKit', '~> 2.0.0'
 

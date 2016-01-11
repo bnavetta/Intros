@@ -18,40 +18,53 @@ extension BNIUser {
     }
 }
 
-final class UserManager {
+protocol UserManager {
+    func loadUser(scheduler: SchedulerType) -> Observable<User>
+    func saveUser(user: User, scheduler: SchedulerType) -> Observable<()>
+}
+
+final class UserManagerImpl: UserManager {
     private let userFilePath = applicationSupport() + "user.dat";
     
     private var userFile: DataFile {
         return DataFile(path: userFilePath);
     }
     
-    func loadUser() -> Observable<User> {
+    func loadUser(scheduler: SchedulerType) -> Observable<User> {
         return Observable.create { observer in
-            do {
-                let data = try self.userFile.read();
-                let userProto = try BNIUser.parseData(data);
-                observer.onNext(User.fromProto(userProto));
+            return scheduler.schedule(()) {_ in
+                do {
+                    let data = try self.userFile.read()
+                    let userProto = try BNIUser.parseData(data)
+                    observer.onNext(User.fromProto(userProto))
+                    observer.onCompleted()
+                }
+                catch let e {
+                    observer.onError(e)
+                }
+                
+                return NopDisposable.instance
             }
-            catch let e {
-                observer.onError(e);
-            }
-            
-            return NopDisposable.instance;
-        };
+        }
+        .observeOn(MainScheduler.instance)
     }
     
-    func saveUser(user: User) -> Observable<Void> {
+    func saveUser(user: User, scheduler: SchedulerType) -> Observable<Void> {
         return Observable.create { observer in
-            do {
-                let data = user.toProto().data()!;
-                try data |> self.userFile;
-                observer.onNext(());
+            return scheduler.schedule(user) { user in
+                do {
+                    try self.userFilePath.parent.createDirectory(withIntermediateDirectories: true)
+                    let data = user.toProto().data()!;
+                    try data |> self.userFile;
+                    observer.onNext(());
+                }
+                catch let e {
+                    observer.onError(e);
+                }
+                
+                return NopDisposable.instance;
             }
-            catch let e {
-                observer.onError(e);
-            }
-            
-            return NopDisposable.instance;
         }
+        .observeOn(MainScheduler.instance)
     }
 }
