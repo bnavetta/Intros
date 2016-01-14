@@ -5,12 +5,15 @@ PODS:
   - BEMCheckBox (1.1.1)
   - Cartography (0.6.0)
   - FileKit (2.0.0)
+  - FontAwesome.swift (0.7.0)
   - Keys (1.0.0)
-  - Motif (0.2.1)
   - NSObject+Rx (1.2.0):
     - RxSwift (~> 2.0.0)
   - Protobuf (3.0.0-beta-2)
   - RxCocoa (2.0.0):
+    - RxSwift (~> 2.0)
+  - RxDataSources (0.2):
+    - RxCocoa (~> 2.0)
     - RxSwift (~> 2.0)
   - RxSwift (2.0.0)
   - Swinject (1.0.0)
@@ -20,11 +23,12 @@ DEPENDENCIES:
   - BEMCheckBox
   - Cartography
   - FileKit (~> 2.0.0)
+  - FontAwesome.swift
   - Keys (from `Pods/CocoaPodsKeys`)
-  - Motif
   - NSObject+Rx
   - Protobuf (~> 3.0.0-alpha-3)
   - RxCocoa
+  - RxDataSources
   - RxSwift
   - Swinject
 
@@ -37,11 +41,12 @@ SPEC CHECKSUMS:
   BEMCheckBox: e1dd80417e0a9f1db4b55d8b8d2f3f477d120795
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
   FileKit: fd360f82f62a1f70dd2ccdbe0950d3a6d1e25d1d
+  FontAwesome.swift: c6e30a1a81716306ff9c81f2d38dda88ac5b8294
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
-  Motif: 7177f09100ebde1f39065a43df47f3626a810c63
   NSObject+Rx: 552d0a5bb78087b0faf9f8a066148577f1231426
   Protobuf: f6e2be538e98cf00d9c00b276a32b7995b1f0328
   RxCocoa: b0ebd70b4f7450bdb3c8987b122f8fd568dc1e2f
+  RxDataSources: 09a9230e8e39b5c5df49b7d63e29c2262ebb5cca
   RxSwift: d83246efa6f16c50c143bec134649d045498f601
   Swinject: f1ec058cc1809929fd5b962c3a8a8277827389b6
 

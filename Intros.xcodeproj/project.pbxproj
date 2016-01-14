@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5F6B9BF468C49D5B2A92629E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1186F4F591C1D720200BCA3C /* Pods.framework */; };
+		B52C76901C45624100A1ACD1 /* CNContactViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52C768F1C45624100A1ACD1 /* CNContactViewController+Rx.swift */; };
+		B52C76941C4709E300A1ACD1 /* Motif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52C76931C4709E300A1ACD1 /* Motif.framework */; };
+		B52C76951C4709E300A1ACD1 /* Motif.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52C76931C4709E300A1ACD1 /* Motif.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B52C76981C470B5C00A1ACD1 /* Theme.yaml in Resources */ = {isa = PBXBuildFile; fileRef = B52C76971C470B5C00A1ACD1 /* Theme.yaml */; };
+		B52C769A1C470C1500A1ACD1 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52C76991C470C1500A1ACD1 /* Theming.swift */; };
 		B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BA91C3F68C800EA15D5 /* AppDelegate.swift */; };
-		B5389BAC1C3F68C800EA15D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BAB1C3F68C800EA15D5 /* ViewController.swift */; };
+		B5389BAC1C3F68C800EA15D5 /* OldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BAB1C3F68C800EA15D5 /* OldViewController.swift */; };
 		B5389BAF1C3F68C800EA15D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5389BAD1C3F68C800EA15D5 /* Main.storyboard */; };
 		B5389BB11C3F68C800EA15D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5389BB01C3F68C800EA15D5 /* Assets.xcassets */; };
 		B5389BB41C3F68C800EA15D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5389BB21C3F68C800EA15D5 /* LaunchScreen.storyboard */; };
@@ -17,8 +22,16 @@
 		B5389BCA1C3F68C800EA15D5 /* IntrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BC91C3F68C800EA15D5 /* IntrosUITests.swift */; };
 		B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */; };
+		B5734DDC1C4556740053BD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5734DDB1C4556740053BD8A /* ViewController.swift */; };
+		B5734DDE1C455D590053BD8A /* ImportInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5734DDD1C455D590053BD8A /* ImportInformationViewController.swift */; };
+		B5734DE01C455E410053BD8A /* ImportInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5734DDF1C455E410053BD8A /* ImportInformationViewModel.swift */; };
 		B5749EFC1C4466C20064EBD5 /* AppSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749EFB1C4466C20064EBD5 /* AppSetup.swift */; };
 		B5749EFF1C4469F00064EBD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5749EFD1C4469F00064EBD5 /* Localizable.strings */; };
+		B5749F031C4471330064EBD5 /* ReceiveIntroductionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749F021C4471330064EBD5 /* ReceiveIntroductionPage.swift */; };
+		B5749F051C4471BC0064EBD5 /* ReceiveIntroduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5749F041C4471BC0064EBD5 /* ReceiveIntroduction.storyboard */; };
+		B5749F071C4471E80064EBD5 /* ScanCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749F061C4471E80064EBD5 /* ScanCodeViewModel.swift */; };
+		B5749F091C44724F0064EBD5 /* QRCodeCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749F081C44724F0064EBD5 /* QRCodeCapturer.swift */; };
+		B5749F0B1C44A89C0064EBD5 /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749F0A1C44A89C0064EBD5 /* ScanCodeViewController.swift */; };
 		B58F9ACF1C403E0C000E95A5 /* CleanroomASL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */; };
 		B58F9AD01C403E0C000E95A5 /* CleanroomASL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B58F9AD11C403E0C000E95A5 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */; };
@@ -36,6 +49,7 @@
 		B597DCD31C429A2E00601CB1 /* ObservableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */; };
 		B597DCD51C42B05A00601CB1 /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD41C42B05A00601CB1 /* IntroduceViewController.swift */; };
 		B597DCD91C43583A00601CB1 /* IntroduceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD81C43583A00601CB1 /* IntroduceViewModel.swift */; };
+		B5AEE38B1C4545B3007557D0 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AEE38A1C4545B3007557D0 /* ShareService.swift */; };
 		B5BFA7D51C4020BB00048621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D41C4020BB00048621 /* User.swift */; };
 		B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D71C4021BD00048621 /* UserManager.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +80,7 @@
 			files = (
 				B58F9AD01C403E0C000E95A5 /* CleanroomASL.framework in Embed Frameworks */,
 				B58F9AD21C403E0C000E95A5 /* CleanroomLogger.framework in Embed Frameworks */,
+				B52C76951C4709E300A1ACD1 /* Motif.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,9 +91,13 @@
 		1186F4F591C1D720200BCA3C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3404BAD1A036411C09271C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A64911624BC53E5F270C9389 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B52C768F1C45624100A1ACD1 /* CNContactViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CNContactViewController+Rx.swift"; sourceTree = "<group>"; };
+		B52C76931C4709E300A1ACD1 /* Motif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motif.framework; path = Carthage/Build/iOS/Motif.framework; sourceTree = "<group>"; };
+		B52C76971C470B5C00A1ACD1 /* Theme.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Theme.yaml; sourceTree = "<group>"; };
+		B52C76991C470C1500A1ACD1 /* Theming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
 		B5389BA61C3F68C800EA15D5 /* Intros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5389BA91C3F68C800EA15D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5389BAB1C3F68C800EA15D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5389BAB1C3F68C800EA15D5 /* OldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldViewController.swift; sourceTree = "<group>"; };
 		B5389BAE1C3F68C800EA15D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5389BB01C3F68C800EA15D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5389BB31C3F68C800EA15D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,8 +112,16 @@
 		B5389BD91C3F700A00EA15D5 /* Intros.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intros.pbobjc.h; path = "proto-generated/Intros.pbobjc.h"; sourceTree = SOURCE_ROOT; };
 		B5389BDA1C3F700A00EA15D5 /* Intros.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intros.pbobjc.m; path = "proto-generated/Intros.pbobjc.m"; sourceTree = SOURCE_ROOT; };
 		B5389BDC1C400ECB00EA15D5 /* QRCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCaptureViewController.swift; sourceTree = "<group>"; };
+		B5734DDB1C4556740053BD8A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5734DDD1C455D590053BD8A /* ImportInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportInformationViewController.swift; sourceTree = "<group>"; };
+		B5734DDF1C455E410053BD8A /* ImportInformationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportInformationViewModel.swift; sourceTree = "<group>"; };
 		B5749EFB1C4466C20064EBD5 /* AppSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSetup.swift; sourceTree = "<group>"; };
 		B5749EFE1C4469F00064EBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5749F021C4471330064EBD5 /* ReceiveIntroductionPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveIntroductionPage.swift; sourceTree = "<group>"; };
+		B5749F041C4471BC0064EBD5 /* ReceiveIntroduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReceiveIntroduction.storyboard; sourceTree = "<group>"; };
+		B5749F061C4471E80064EBD5 /* ScanCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCodeViewModel.swift; sourceTree = "<group>"; };
+		B5749F081C44724F0064EBD5 /* QRCodeCapturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCapturer.swift; sourceTree = "<group>"; };
+		B5749F0A1C44A89C0064EBD5 /* ScanCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
 		B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomASL.framework; path = Carthage/Build/iOS/CleanroomASL.framework; sourceTree = "<group>"; };
 		B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		B58F9AD61C403F76000E95A5 /* PrepareIntroductionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareIntroductionViewModel.swift; sourceTree = "<group>"; };
@@ -110,6 +137,7 @@
 		B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableHelpers.swift; sourceTree = "<group>"; };
 		B597DCD41C42B05A00601CB1 /* IntroduceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
 		B597DCD81C43583A00601CB1 /* IntroduceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroduceViewModel.swift; sourceTree = "<group>"; };
+		B5AEE38A1C4545B3007557D0 /* ShareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
 		B5BFA7D41C4020BB00048621 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5BFA7D71C4021BD00048621 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +149,7 @@
 			files = (
 				B58F9AD11C403E0C000E95A5 /* CleanroomLogger.framework in Frameworks */,
 				B58F9ACF1C403E0C000E95A5 /* CleanroomASL.framework in Frameworks */,
+				B52C76941C4709E300A1ACD1 /* Motif.framework in Frameworks */,
 				5F6B9BF468C49D5B2A92629E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,9 +179,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B52C76961C470B4100A1ACD1 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B52C76971C470B5C00A1ACD1 /* Theme.yaml */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		B5389B9D1C3F68C800EA15D5 = {
 			isa = PBXGroup;
 			children = (
+				B52C76931C4709E300A1ACD1 /* Motif.framework */,
 				B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */,
 				B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */,
 				B5389BA81C3F68C800EA15D5 /* Intros */,
@@ -177,14 +215,16 @@
 		B5389BA81C3F68C800EA15D5 /* Intros */ = {
 			isa = PBXGroup;
 			children = (
+				B52C76961C470B4100A1ACD1 /* Theme */,
 				B5749F001C4469F50064EBD5 /* I18N */,
 				B58F9AD81C404496000E95A5 /* Extensions */,
 				B58F9AD51C403F5E000E95A5 /* Pages */,
 				B5BFA7D61C4021B400048621 /* Services */,
 				B5BFA7D31C4020BB00048621 /* Models */,
 				B5389BA91C3F68C800EA15D5 /* AppDelegate.swift */,
+				B5734DDB1C4556740053BD8A /* ViewController.swift */,
 				B5749EFB1C4466C20064EBD5 /* AppSetup.swift */,
-				B5389BAB1C3F68C800EA15D5 /* ViewController.swift */,
+				B5389BAB1C3F68C800EA15D5 /* OldViewController.swift */,
 				B5389BAD1C3F68C800EA15D5 /* Main.storyboard */,
 				B5389BB01C3F68C800EA15D5 /* Assets.xcassets */,
 				B5389BB21C3F68C800EA15D5 /* LaunchScreen.storyboard */,
@@ -231,6 +271,19 @@
 			name = I18N;
 			sourceTree = "<group>";
 		};
+		B5749F011C4471200064EBD5 /* ReceiveIntroduction */ = {
+			isa = PBXGroup;
+			children = (
+				B5749F021C4471330064EBD5 /* ReceiveIntroductionPage.swift */,
+				B5749F041C4471BC0064EBD5 /* ReceiveIntroduction.storyboard */,
+				B5749F061C4471E80064EBD5 /* ScanCodeViewModel.swift */,
+				B5749F0A1C44A89C0064EBD5 /* ScanCodeViewController.swift */,
+				B5734DDF1C455E410053BD8A /* ImportInformationViewModel.swift */,
+				B5734DDD1C455D590053BD8A /* ImportInformationViewController.swift */,
+			);
+			path = ReceiveIntroduction;
+			sourceTree = "<group>";
+		};
 		B58F9AD41C403F56000E95A5 /* Introduce */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +301,7 @@
 		B58F9AD51C403F5E000E95A5 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				B5749F011C4471200064EBD5 /* ReceiveIntroduction */,
 				B58F9AD41C403F56000E95A5 /* Introduce */,
 				B597DCCE1C4209C700601CB1 /* Page.swift */,
 			);
@@ -261,6 +315,8 @@
 				B597DCC81C41C17500601CB1 /* DataBinding.swift */,
 				B597DCD01C421F2A00601CB1 /* ConcurrentDispatchQueueScheduler+StandardQueues.swift */,
 				B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */,
+				B52C768F1C45624100A1ACD1 /* CNContactViewController+Rx.swift */,
+				B52C76991C470C1500A1ACD1 /* Theming.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +334,8 @@
 			children = (
 				B5BFA7D71C4021BD00048621 /* UserManager.swift */,
 				B597DCCA1C41CAB600601CB1 /* QRCodeGenerator.swift */,
+				B5749F081C44724F0064EBD5 /* QRCodeCapturer.swift */,
+				B5AEE38A1C4545B3007557D0 /* ShareService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -407,7 +465,9 @@
 				B5749EFF1C4469F00064EBD5 /* Localizable.strings in Resources */,
 				B597DCC71C41B14E00601CB1 /* ShareTableViewCell.xib in Resources */,
 				B5389BB41C3F68C800EA15D5 /* LaunchScreen.storyboard in Resources */,
+				B5749F051C4471BC0064EBD5 /* ReceiveIntroduction.storyboard in Resources */,
 				B5389BB11C3F68C800EA15D5 /* Assets.xcassets in Resources */,
+				B52C76981C470B5C00A1ACD1 /* Theme.yaml in Resources */,
 				B5389BAF1C3F68C800EA15D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,7 +515,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PROJECT_DIR\"/Carthage/Checkouts/CleanroomLogger/BuildControl/bin/stripCarthageFrameworks.sh";
+			shellScript = "\"$PROJECT_DIR\"/Carthage/Checkouts/CleanroomLogger/BuildControl/bin/stripCarthageFrameworks.sh --platform iOS";
 		};
 		BB9534E2BE65C686667FBBA3 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -496,18 +556,28 @@
 			files = (
 				B58F9ADC1C40487D000E95A5 /* PrepareIntroductionViewController.swift in Sources */,
 				B597DCC91C41C17500601CB1 /* DataBinding.swift in Sources */,
+				B5AEE38B1C4545B3007557D0 /* ShareService.swift in Sources */,
+				B5749F0B1C44A89C0064EBD5 /* ScanCodeViewController.swift in Sources */,
+				B5734DDE1C455D590053BD8A /* ImportInformationViewController.swift in Sources */,
 				B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */,
 				B58F9AD71C403F76000E95A5 /* PrepareIntroductionViewModel.swift in Sources */,
+				B5734DDC1C4556740053BD8A /* ViewController.swift in Sources */,
+				B52C769A1C470C1500A1ACD1 /* Theming.swift in Sources */,
 				B597DCD51C42B05A00601CB1 /* IntroduceViewController.swift in Sources */,
 				B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */,
-				B5389BAC1C3F68C800EA15D5 /* ViewController.swift in Sources */,
+				B52C76901C45624100A1ACD1 /* CNContactViewController+Rx.swift in Sources */,
+				B5389BAC1C3F68C800EA15D5 /* OldViewController.swift in Sources */,
+				B5749F031C4471330064EBD5 /* ReceiveIntroductionPage.swift in Sources */,
+				B5734DE01C455E410053BD8A /* ImportInformationViewModel.swift in Sources */,
 				B597DCC51C41AA5000601CB1 /* BEMCheckBox+Rx.swift in Sources */,
 				B597DCD11C421F2A00601CB1 /* ConcurrentDispatchQueueScheduler+StandardQueues.swift in Sources */,
 				B597DCCD1C42073B00601CB1 /* IntroducePage.swift in Sources */,
 				B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */,
 				B5749EFC1C4466C20064EBD5 /* AppSetup.swift in Sources */,
 				B5BFA7D51C4020BB00048621 /* User.swift in Sources */,
+				B5749F071C4471E80064EBD5 /* ScanCodeViewModel.swift in Sources */,
 				B597DCD91C43583A00601CB1 /* IntroduceViewModel.swift in Sources */,
+				B5749F091C44724F0064EBD5 /* QRCodeCapturer.swift in Sources */,
 				B597DCCB1C41CAB600601CB1 /* QRCodeGenerator.swift in Sources */,
 				B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */,
 				B597DCD31C429A2E00601CB1 /* ObservableHelpers.swift in Sources */,

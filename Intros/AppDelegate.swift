@@ -31,14 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             Log.enable()
         }
+        
+        initializeTheming()
     }
 
+    // TODO: apple watch app to show code
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Log.info?.message("App launched");
         
-        let user = User(firstName: "Ben", lastName: "Navetta", phoneNumber: "9783023343", facebookId: "100001646049061", snapchatUsername: "ben.navetta", twitterHandle: "")
-        userManager.saveUser(user, scheduler: MainScheduler.instance)
+        userManager.saveUser(User.testInstance, scheduler: MainScheduler.instance)
             .subscribe()
             .addDisposableTo(rx_disposeBag)
 
@@ -46,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let pagedViewController = PagedViewController(pages: [
-            IntroducePage(), HelloPage()
+            IntroducePage(), ReceiveIntroductionPage(), HelloPage()
             ], initialIndex: 0)
         window?.rootViewController = pagedViewController
         

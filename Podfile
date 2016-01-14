@@ -12,15 +12,17 @@ pod 'RxSwift'
 pod 'RxCocoa'
 pod 'Action'
 pod 'NSObject+Rx'
+pod 'RxDataSources'
 
 pod 'Swinject'
 
 pod 'Protobuf', '~> 3.0.0-alpha-3'
 pod 'FileKit', '~> 2.0.0'
 
-pod 'Motif'
+# pod 'Motif'
 pod 'Cartography'
 pod 'BEMCheckBox'
+pod 'FontAwesome.swift'
 
 target 'IntrosTests' do
 

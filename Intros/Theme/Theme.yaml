@@ -1,0 +1,18 @@
+# Colors from https://www.google.com/design/spec/style/color.html#color-color-palette
+$PrimaryColor: '#03a9f4' # Light Blue 500
+$PrimaryLightColor: '#81d4fa' # Light Blue 200
+$PrimaryDarkColor: '#0288d1' # Light Blue 700
+$AccentColor: '#ffd740' # Amber A200
+
+$IconColor: $PrimaryDarkColor
+
+# http://brandcolors.net/
+$TwitterColor: '#55acee'
+$FacebookColor: '#3b5998'
+
+.SocialImportContainer:
+    backgroundColor: $AccentColor
+
+.SocialImport:
+    cornerRadius: 20.0
+    backgroundColor: $PrimaryLightColor

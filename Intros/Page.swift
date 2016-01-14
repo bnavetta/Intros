@@ -25,10 +25,11 @@ extension UIViewController {
     }
 }
 
-class PagedViewController: UIViewController, UIPageViewControllerDataSource {
+class PagedViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     let pageController: UIPageViewController
     let pages: [Page]
     let initialIndex: Int
+    var currentViewController: UIViewController?
     
     init(pages: [Page], initialIndex: Int) {
         self.pages = pages
@@ -39,6 +40,7 @@ class PagedViewController: UIViewController, UIPageViewControllerDataSource {
         super.init(nibName: nil, bundle: nil)
         
         pageController.dataSource = self
+        pageController.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -85,9 +87,18 @@ class PagedViewController: UIViewController, UIPageViewControllerDataSource {
         }
     }
     
+    func pageViewController(pageViewController: UIPageViewController, willTransitionToViewControllers pendingViewControllers: [UIViewController]) {
+        currentViewController = pendingViewControllers.first
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
     func instantiateViewControllerAtIndex(index: Int) -> UIViewController {
         let vc = pages[index].createViewController()
         vc.pageIndex = index
         return vc
+    }
+    
+    override func childViewControllerForStatusBarHidden() -> UIViewController? {
+        return currentViewController
     }
 }

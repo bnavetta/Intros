@@ -24,6 +24,8 @@ struct User {
     let snapchatUsername: String
     let twitterHandle: String
     
+    static var testInstance = User(firstName: "Ben", lastName: "Navetta", phoneNumber: "9783023343", facebookId: "100001646049061", snapchatUsername: "ben.navetta", twitterHandle: "BenNavetta")
+    
     static func fromProto(proto: BNIUser) -> User {
         return User(firstName: proto.firstName,
             lastName: proto.lastName,

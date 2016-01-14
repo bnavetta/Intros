@@ -21,13 +21,14 @@ class ShareTableViewCell: UITableViewCell {
     }
 }
 
-class PrepareIntroductionViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PrepareIntroductionViewController : ViewController, UITableViewDataSource, UITableViewDelegate {
     var viewModel: IntroduceViewModelType!
     
     @IBOutlet
     weak var sharingTable: UITableView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         sharingTable.dataSource = self
         sharingTable.delegate = self
         sharingTable.registerNib(UINib(nibName: "ShareTableViewCell", bundle: nil), forCellReuseIdentifier: "shareCell");
