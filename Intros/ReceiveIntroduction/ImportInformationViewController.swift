@@ -36,7 +36,6 @@ class ImportInformationViewController: ViewController, UICollectionViewDelegate 
             cell.contentView.layer.cornerRadius = 3.0
             
             self.theme.applyClass("SocialImport", to: cell)
-            print(cell.layer.cornerRadius)
             
             return cell
         }

@@ -27,9 +27,7 @@ struct ViewControllerHolder {
     
     func popViewController(animated: Bool) {
         if let navigationController = currentVC?.navigationController {
-//            print(navigationController.viewControllers)
             navigationController.popViewControllerAnimated(animated)
-//            print("Popped", popped, " -> ", navigationController.viewControllers)
         }
         else {
             currentVC?.dismissViewControllerAnimated(animated, completion: nil)
