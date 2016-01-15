@@ -13,6 +13,7 @@
 		B52C76951C4709E300A1ACD1 /* Motif.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52C76931C4709E300A1ACD1 /* Motif.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B52C76981C470B5C00A1ACD1 /* Theme.yaml in Resources */ = {isa = PBXBuildFile; fileRef = B52C76971C470B5C00A1ACD1 /* Theme.yaml */; };
 		B52C769A1C470C1500A1ACD1 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52C76991C470C1500A1ACD1 /* Theming.swift */; };
+		B52C769C1C4758A400A1ACD1 /* UICollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52C769B1C4758A400A1ACD1 /* UICollectionView+Rx.swift */; };
 		B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BA91C3F68C800EA15D5 /* AppDelegate.swift */; };
 		B5389BAC1C3F68C800EA15D5 /* OldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389BAB1C3F68C800EA15D5 /* OldViewController.swift */; };
 		B5389BAF1C3F68C800EA15D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5389BAD1C3F68C800EA15D5 /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 		B52C76931C4709E300A1ACD1 /* Motif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motif.framework; path = Carthage/Build/iOS/Motif.framework; sourceTree = "<group>"; };
 		B52C76971C470B5C00A1ACD1 /* Theme.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Theme.yaml; sourceTree = "<group>"; };
 		B52C76991C470C1500A1ACD1 /* Theming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
+		B52C769B1C4758A400A1ACD1 /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Rx.swift"; sourceTree = "<group>"; };
 		B5389BA61C3F68C800EA15D5 /* Intros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5389BA91C3F68C800EA15D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5389BAB1C3F68C800EA15D5 /* OldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */,
 				B52C768F1C45624100A1ACD1 /* CNContactViewController+Rx.swift */,
 				B52C76991C470C1500A1ACD1 /* Theming.swift */,
+				B52C769B1C4758A400A1ACD1 /* UICollectionView+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				B52C769A1C470C1500A1ACD1 /* Theming.swift in Sources */,
 				B597DCD51C42B05A00601CB1 /* IntroduceViewController.swift in Sources */,
 				B5389BDB1C3F700A00EA15D5 /* Intros.pbobjc.m in Sources */,
+				B52C769C1C4758A400A1ACD1 /* UICollectionView+Rx.swift in Sources */,
 				B52C76901C45624100A1ACD1 /* CNContactViewController+Rx.swift in Sources */,
 				B5389BAC1C3F68C800EA15D5 /* OldViewController.swift in Sources */,
 				B5749F031C4471330064EBD5 /* ReceiveIntroductionPage.swift in Sources */,

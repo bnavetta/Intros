@@ -23,7 +23,7 @@ class ImportInformationViewModel: ImportInformationViewModelType {
         var items = [SocialImportItem]()
         
         if user.hasInfo(.Name) || user.hasInfo(.PhoneNumber) {
-            items.append(SocialImportItem(socialInfo: .Contact, icon: UIImage.fontAwesomeIconWithName(.UserPlus, textColor: theme.constantColorForName("IconColor")!, size: CGSizeMake(100, 100), backgroundColor: theme.primaryLightColor)))
+            items.append(SocialImportItem(socialInfo: .Contact, icon: UIImage.fontAwesomeIconWithName(.UserPlus, textColor: theme.accentColor, size: CGSizeMake(100, 100), backgroundColor: UIColor.clearColor())))
         }
         
         if user.hasInfo(.Facebook) {

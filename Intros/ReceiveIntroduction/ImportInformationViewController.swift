@@ -53,5 +53,17 @@ class ImportInformationViewController: ViewController, UICollectionViewDelegate 
             self.viewModel.importItem(item).subscribe().addDisposableTo(self.rx_disposeBag)
         }
         .addDisposableTo(rx_disposeBag)
+        
+        collectionView.rx_highlightedCell.subscribeNext { indexPath in
+            let cell = self.collectionView.cellForItemAtIndexPath(indexPath)!
+            self.theme.applyClass("SocialImportHighlighted", to: cell)
+        }
+        .addDisposableTo(rx_disposeBag)
+        
+        collectionView.rx_unhighlightedCell.subscribeNext { indexPath in
+            let cell = self.collectionView.cellForItemAtIndexPath(indexPath)!
+            self.theme.applyClass("SocialImport", to: cell)
+        }
+        .addDisposableTo(rx_disposeBag)
     }
 }

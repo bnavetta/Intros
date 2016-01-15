@@ -4,8 +4,6 @@ $PrimaryLightColor: '#81d4fa' # Light Blue 200
 $PrimaryDarkColor: '#0288d1' # Light Blue 700
 $AccentColor: '#ffd740' # Amber A200
 
-$IconColor: $PrimaryDarkColor
-
 # http://brandcolors.net/
 $TwitterColor: '#55acee'
 $FacebookColor: '#3b5998'
@@ -16,3 +14,7 @@ $FacebookColor: '#3b5998'
 .SocialImport:
     cornerRadius: 20.0
     backgroundColor: $PrimaryLightColor
+
+.SocialImportHighlighted:
+    _superclass: .SocialImport
+    backgroundColor: $PrimaryDarkColor
