@@ -50,6 +50,7 @@
 		B597DCD31C429A2E00601CB1 /* ObservableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */; };
 		B597DCD51C42B05A00601CB1 /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD41C42B05A00601CB1 /* IntroduceViewController.swift */; };
 		B597DCD91C43583A00601CB1 /* IntroduceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597DCD81C43583A00601CB1 /* IntroduceViewModel.swift */; };
+		B59AF7551C49B52E00ECFF04 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B59AF7541C49B52E00ECFF04 /* Default-568h@2x.png */; };
 		B5AEE38B1C4545B3007557D0 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AEE38A1C4545B3007557D0 /* ShareService.swift */; };
 		B5BFA7D51C4020BB00048621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D41C4020BB00048621 /* User.swift */; };
 		B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D71C4021BD00048621 /* UserManager.swift */; };
@@ -139,6 +140,7 @@
 		B597DCD21C429A2E00601CB1 /* ObservableHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableHelpers.swift; sourceTree = "<group>"; };
 		B597DCD41C42B05A00601CB1 /* IntroduceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
 		B597DCD81C43583A00601CB1 /* IntroduceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroduceViewModel.swift; sourceTree = "<group>"; };
+		B59AF7541C49B52E00ECFF04 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B5AEE38A1C4545B3007557D0 /* ShareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
 		B5BFA7D41C4020BB00048621 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5BFA7D71C4021BD00048621 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		B5389B9D1C3F68C800EA15D5 = {
 			isa = PBXGroup;
 			children = (
+				B59AF7541C49B52E00ECFF04 /* Default-568h@2x.png */,
 				B52C76931C4709E300A1ACD1 /* Motif.framework */,
 				B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */,
 				B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */,
@@ -466,6 +469,7 @@
 			files = (
 				B597DCC31C41A80A00601CB1 /* Introduce.storyboard in Resources */,
 				B5749EFF1C4469F00064EBD5 /* Localizable.strings in Resources */,
+				B59AF7551C49B52E00ECFF04 /* Default-568h@2x.png in Resources */,
 				B597DCC71C41B14E00601CB1 /* ShareTableViewCell.xib in Resources */,
 				B5389BB41C3F68C800EA15D5 /* LaunchScreen.storyboard in Resources */,
 				B5749F051C4471BC0064EBD5 /* ReceiveIntroduction.storyboard in Resources */,

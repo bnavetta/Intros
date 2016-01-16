@@ -3,7 +3,17 @@ PODS:
     - RxCocoa (~> 2.0.0)
     - RxSwift (~> 2.0.0)
   - BEMCheckBox (1.1.1)
+  - Bolts (1.6.0):
+    - Bolts/AppLinks (= 1.6.0)
+    - Bolts/Tasks (= 1.6.0)
+  - Bolts/AppLinks (1.6.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.6.0)
   - Cartography (0.6.0)
+  - FBSDKCoreKit (4.9.0):
+    - Bolts (~> 1.5)
+  - FBSDKLoginKit (4.9.0):
+    - FBSDKCoreKit
   - FileKit (2.0.0)
   - FontAwesome.swift (0.7.0)
   - Keys (1.0.0)
@@ -22,6 +32,7 @@ DEPENDENCIES:
   - Action
   - BEMCheckBox
   - Cartography
+  - FBSDKLoginKit
   - FileKit (~> 2.0.0)
   - FontAwesome.swift
   - Keys (from `Pods/CocoaPodsKeys`)
@@ -39,7 +50,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Action: 25745dd09111b2a4bdf6164b2338b2104ea5696f
   BEMCheckBox: e1dd80417e0a9f1db4b55d8b8d2f3f477d120795
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  FBSDKCoreKit: c4f25d27949a6ac80206063804d12ad1c7879612
+  FBSDKLoginKit: d46210c3955d69337c61325327f486ca50a8661f
   FileKit: fd360f82f62a1f70dd2ccdbe0950d3a6d1e25d1d
   FontAwesome.swift: c6e30a1a81716306ff9c81f2d38dda88ac5b8294
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe

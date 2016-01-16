@@ -1,3 +1,5 @@
+# vim: set ft=ruby :
+
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '9.0'
@@ -15,6 +17,9 @@ pod 'NSObject+Rx'
 pod 'RxDataSources'
 
 pod 'Swinject'
+
+pod 'FBSDKLoginKit'
+pod 'FBSDKCoreKit'
 
 pod 'Protobuf', '~> 3.0.0-alpha-3'
 pod 'FileKit', '~> 2.0.0'
