@@ -10,6 +10,7 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.6.0)
   - Cartography (0.6.0)
+  - Eureka (1.3.1)
   - FBSDKCoreKit (4.9.0):
     - Bolts (~> 1.5)
   - FBSDKLoginKit (4.9.0):
@@ -32,6 +33,8 @@ DEPENDENCIES:
   - Action
   - BEMCheckBox
   - Cartography
+  - Eureka
+  - FBSDKCoreKit
   - FBSDKLoginKit
   - FileKit (~> 2.0.0)
   - FontAwesome.swift
@@ -52,6 +55,7 @@ SPEC CHECKSUMS:
   BEMCheckBox: e1dd80417e0a9f1db4b55d8b8d2f3f477d120795
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  Eureka: 10df73e578ed8ec1f30c8fda5b4ffc8739786b74
   FBSDKCoreKit: c4f25d27949a6ac80206063804d12ad1c7879612
   FBSDKLoginKit: d46210c3955d69337c61325327f486ca50a8661f
   FileKit: fd360f82f62a1f70dd2ccdbe0950d3a6d1e25d1d

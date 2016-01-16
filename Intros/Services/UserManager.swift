@@ -21,6 +21,9 @@ extension BNIUser {
 protocol UserManager {
     func loadUser(scheduler: SchedulerType) -> Observable<User>
     func saveUser(user: User, scheduler: SchedulerType) -> Observable<()>
+    
+    func loadUserSync() throws -> User
+    func saveUserSync(user: User) throws
 }
 
 final class UserManagerImpl: UserManager {
@@ -30,13 +33,23 @@ final class UserManagerImpl: UserManager {
         return DataFile(path: userFilePath);
     }
     
+    func loadUserSync() throws -> User {
+        let data = try self.userFile.read()
+        let userProto = try BNIUser.parseData(data)
+        return User.fromProto(userProto)
+    }
+    
+    func saveUserSync(user: User) throws {
+        try self.userFilePath.parent.createDirectory(withIntermediateDirectories: true)
+        let data = user.toProto().data()!
+        try data |> self.userFile
+    }
+    
     func loadUser(scheduler: SchedulerType) -> Observable<User> {
         return Observable.create { observer in
             return scheduler.schedule(()) {_ in
                 do {
-                    let data = try self.userFile.read()
-                    let userProto = try BNIUser.parseData(data)
-                    observer.onNext(User.fromProto(userProto))
+                    observer.onNext(try self.loadUserSync())
                     observer.onCompleted()
                 }
                 catch let e {
@@ -53,16 +66,15 @@ final class UserManagerImpl: UserManager {
         return Observable.create { observer in
             return scheduler.schedule(user) { user in
                 do {
-                    try self.userFilePath.parent.createDirectory(withIntermediateDirectories: true)
-                    let data = user.toProto().data()!;
-                    try data |> self.userFile;
-                    observer.onNext(());
+                    try self.saveUserSync(user)
+                    observer.onNext(())
+                    observer.onCompleted()
                 }
                 catch let e {
-                    observer.onError(e);
+                    observer.onError(e)
                 }
                 
-                return NopDisposable.instance;
+                return NopDisposable.instance
             }
         }
         .observeOn(MainScheduler.instance)

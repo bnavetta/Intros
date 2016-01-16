@@ -12,12 +12,6 @@ import CleanroomLogger
 import NSObject_Rx
 import FBSDKCoreKit
 
-class HelloPage: Page {
-    func createViewController() -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("hello")
-    }
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -51,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let pagedViewController = PagedViewController(pages: [
-            IntroducePage(), ReceiveIntroductionPage(), HelloPage()
+            IntroducePage(), ReceiveIntroductionPage(), EditUserPage()
             ], initialIndex: 0)
         window?.rootViewController = pagedViewController
         

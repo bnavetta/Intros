@@ -6,7 +6,11 @@ import UIKit
 struct ViewControllerHolder {
     static var instance = ViewControllerHolder()
     
-    private var currentVC: ViewController?
+    private var currentVC: UIViewController?
+    
+    mutating func setCurrentViewController(vc: UIViewController) {
+        self.currentVC = vc
+    }
     
     func presentViewController(viewController: UIViewController, animated: Bool = false, completion: (() -> Void)? = nil) {
         currentVC?.presentViewController(viewController, animated: animated, completion: completion)
@@ -35,6 +39,7 @@ struct ViewControllerHolder {
     }
 }
 
+// Would be nice to make this a mixin with protocol extensions
 class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         ViewControllerHolder.instance.currentVC = self

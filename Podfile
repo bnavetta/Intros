@@ -28,6 +28,7 @@ pod 'FileKit', '~> 2.0.0'
 pod 'Cartography'
 pod 'BEMCheckBox'
 pod 'FontAwesome.swift'
+pod 'Eureka'
 
 target 'IntrosTests' do
 
