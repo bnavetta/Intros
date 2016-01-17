@@ -1,9 +1,12 @@
 import Foundation
 import UIKit
+
 import RxSwift
 import Cartography
 import BEMCheckBox
 import CleanroomLogger
+import FontAwesome_swift
+import Motif
 
 class ShareTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
@@ -23,15 +26,22 @@ class ShareTableViewCell: UITableViewCell {
 
 class PrepareIntroductionViewController : ViewController, UITableViewDataSource, UITableViewDelegate {
     var viewModel: IntroduceViewModelType!
+    var theme: MTFTheme!
     
     @IBOutlet
     weak var sharingTable: UITableView!
+    
+    @IBOutlet
+    weak var instructionsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sharingTable.dataSource = self
         sharingTable.delegate = self
         sharingTable.registerNib(UINib(nibName: "ShareTableViewCell", bundle: nil), forCellReuseIdentifier: "shareCell");
+        
+        theme.applyClass("Label", to: instructionsLabel)
+        instructionsLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleTitle1)
     }
     
     // MARK: - Table view data source
@@ -49,6 +59,11 @@ class PrepareIntroductionViewController : ViewController, UITableViewDataSource,
         let shareInfoVM = viewModel.shareInfoAtIndexPath(indexPath)
         cell.viewModel = shareInfoVM
         
+        cell.shareCheck.onAnimationType = .Bounce
+        cell.shareCheck.offAnimationType = .Bounce
+        theme.applyClass("CheckBox", to: cell.shareCheck)
+        theme.applyClass("Label", to: cell.nameLabel)
+
         return cell
     }
     

@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let theme = AppSetup.rootContainer.resolve(MTFTheme.self)!
-        window?.tintColor = theme.primaryColor
+        window?.tintColor = theme.primaryDarkColor
         
         let pagedViewController = PagedViewController(pages: [
             IntroducePage(), ReceiveIntroductionPage(), EditUserPage()

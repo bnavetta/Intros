@@ -3,6 +3,7 @@ import UIKit
 
 import Swinject
 import Prephirences
+import Motif
 
 final class IntroducePage: Page {
     static var container = Container(parent: AppSetup.rootContainer) { container in
@@ -14,7 +15,14 @@ final class IntroducePage: Page {
         container.registerForStoryboard(IntroduceViewController.self) { r, c in
             c.viewModel = r.resolve(IntroduceViewModelType.self)
         }
-
+        
+        container.registerForStoryboard(PresentCodeViewController.self) { r, c in
+            c.theme = r.resolve(MTFTheme.self)
+        }
+        
+        container.registerForStoryboard(PrepareIntroductionViewController.self) { r, c in
+            c.theme = r.resolve(MTFTheme.self)
+        }
     }
     
 //    static var container: Container = {

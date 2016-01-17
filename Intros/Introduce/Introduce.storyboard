@@ -39,19 +39,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="WBV-RF-5j3">
                                 <rect key="frame" x="246" y="246" width="108" height="108"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rjm-xI-RNP">
+                                <rect key="frame" x="270" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Hoy-Zh-qlh"/>
+                                    <constraint firstAttribute="height" constant="60" id="Pg4-RM-vBE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="WBV-RF-5j3" secondAttribute="trailing" constant="20" id="0nZ-CN-YWa"/>
                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="WBV-RF-5j3" secondAttribute="bottom" constant="20" id="Et9-1U-BTV"/>
+                            <constraint firstItem="rjm-xI-RNP" firstAttribute="top" secondItem="zCF-gX-qHl" secondAttribute="topMargin" constant="10" id="Fa9-Lz-29B"/>
                             <constraint firstItem="WBV-RF-5j3" firstAttribute="centerX" secondItem="zCF-gX-qHl" secondAttribute="centerX" id="Nlj-2E-3L6"/>
                             <constraint firstItem="WBV-RF-5j3" firstAttribute="centerY" secondItem="zCF-gX-qHl" secondAttribute="centerY" id="krd-dU-2ZZ"/>
                             <constraint firstItem="WBV-RF-5j3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zCF-gX-qHl" secondAttribute="leadingMargin" constant="20" id="mdH-8z-9nZ"/>
+                            <constraint firstItem="rjm-xI-RNP" firstAttribute="centerX" secondItem="zCF-gX-qHl" secondAttribute="centerX" id="mfH-V4-6QL"/>
                             <constraint firstItem="WBV-RF-5j3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zCF-gX-qHl" secondAttribute="topMargin" constant="20" id="uXv-5Z-JVb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="WBV-RF-5j3" id="l9t-zQ-OFl"/>
+                        <outlet property="upCaretView" destination="rjm-xI-RNP" id="fWC-QG-AMa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgR-Tr-8mw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,19 +81,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9mO-F5-XPV">
-                                <rect key="frame" x="32" y="32" width="536" height="528"/>
+                                <rect key="frame" x="32" y="120.5" width="536" height="439.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to share?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY0-2j-ktj">
+                                <rect key="frame" x="193" y="60" width="213" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9mO-F5-XPV" firstAttribute="top" secondItem="WEB-Jk-h3u" secondAttribute="bottom" constant="12" id="CLI-fe-kkl"/>
-                            <constraint firstItem="DyI-Cb-KaI" firstAttribute="top" secondItem="9mO-F5-XPV" secondAttribute="bottom" constant="40" id="Fyj-Wn-mfY"/>
+                            <constraint firstItem="wY0-2j-ktj" firstAttribute="top" secondItem="WEB-Jk-h3u" secondAttribute="bottom" constant="40" id="6dn-iq-fgx"/>
+                            <constraint firstItem="9mO-F5-XPV" firstAttribute="top" secondItem="wY0-2j-ktj" secondAttribute="bottom" constant="40" id="eF7-Fy-zhX"/>
                             <constraint firstItem="9mO-F5-XPV" firstAttribute="leading" secondItem="smT-WC-oef" secondAttribute="leadingMargin" constant="12" id="ihx-mJ-hfy"/>
+                            <constraint firstItem="DyI-Cb-KaI" firstAttribute="top" secondItem="9mO-F5-XPV" secondAttribute="bottom" constant="40" id="n8C-WH-5Gi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9mO-F5-XPV" secondAttribute="trailing" constant="12" id="r8d-sT-eFq"/>
+                            <constraint firstItem="wY0-2j-ktj" firstAttribute="centerX" secondItem="smT-WC-oef" secondAttribute="centerX" id="uK4-4A-EKA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="instructionsLabel" destination="wY0-2j-ktj" id="3Bd-iJ-RNe"/>
                         <outlet property="sharingTable" destination="9mO-F5-XPV" id="16Q-3j-1dI"/>
                     </connections>
                 </viewController>

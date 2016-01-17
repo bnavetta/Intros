@@ -1,17 +1,27 @@
 import Foundation
 import UIKit
+
 import RxSwift
 import RxCocoa
 import CleanroomLogger
+import FontAwesome_swift
+import Motif
 
 class PresentCodeViewController: ViewController {
     var viewModel: IntroduceViewModelType!
+    var theme: MTFTheme!
     
     @IBOutlet
     weak var imageView: UIImageView!
     
+    @IBOutlet
+    weak var upCaretView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        upCaretView.image = UIImage.fontAwesomeIconWithName(.ChevronUp, textColor: theme.primaryDarkColor, size: CGSizeMake(60, 60))
+        
         viewModel.qrCodeImage.driveNext { image in
             self.imageView.image = image
         }
@@ -22,8 +32,6 @@ class PresentCodeViewController: ViewController {
 class IntroduceViewController: ViewController, UIPageViewControllerDataSource {
     var viewModel: IntroduceViewModelType!
     
-//    @IBOutlet
-//    var prepareViewController: PrepareIntroductionViewController! = IntroducePage.storyboard.instantiateViewControllerWithIdentifier("prepareIntro") as! PrepareIntroductionViewController
     var prepareViewController: PrepareIntroductionViewController {
         let vc = storyboard?.instantiateViewControllerWithIdentifier("prepareIntro") as! PrepareIntroductionViewController
         vc.viewModel = viewModel
@@ -35,9 +43,6 @@ class IntroduceViewController: ViewController, UIPageViewControllerDataSource {
         vc.viewModel = viewModel
         return vc
     }
-    
-//    @IBOutlet
-//    var codeViewController: PresentCodeViewController! = IntroducePage.storyboard.instantiateViewControllerWithIdentifier("presentCode") as! PresentCodeViewController
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         

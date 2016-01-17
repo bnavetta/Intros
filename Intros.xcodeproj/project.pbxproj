@@ -59,6 +59,7 @@
 		B59AF7621C4B4BC200ECFF04 /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59AF7611C4B4BC200ECFF04 /* Facebook.swift */; };
 		B59AF7641C4B51E900ECFF04 /* FacebookAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59AF7631C4B51E900ECFF04 /* FacebookAccountCell.xib */; };
 		B59AF7671C4B60A400ECFF04 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59AF7661C4B60A400ECFF04 /* Preferences.swift */; };
+		B59AF76A1C4BED4C00ECFF04 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59AF7691C4BED4C00ECFF04 /* SetupViewController.swift */; };
 		B5AEE38B1C4545B3007557D0 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AEE38A1C4545B3007557D0 /* ShareService.swift */; };
 		B5BFA7D51C4020BB00048621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D41C4020BB00048621 /* User.swift */; };
 		B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D71C4021BD00048621 /* UserManager.swift */; };
@@ -157,6 +158,7 @@
 		B59AF7611C4B4BC200ECFF04 /* Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
 		B59AF7631C4B51E900ECFF04 /* FacebookAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookAccountCell.xib; sourceTree = "<group>"; };
 		B59AF7661C4B60A400ECFF04 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		B59AF7691C4BED4C00ECFF04 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		B5AEE38A1C4545B3007557D0 /* ShareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
 		B5BFA7D41C4020BB00048621 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5BFA7D71C4021BD00048621 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 		B58F9AD51C403F5E000E95A5 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				B59AF7681C4BED3D00ECFF04 /* Setup */,
 				B59AF7561C49F8EE00ECFF04 /* EditUser */,
 				B5749F011C4471200064EBD5 /* ReceiveIntroduction */,
 				B58F9AD41C403F56000E95A5 /* Introduce */,
@@ -364,6 +367,14 @@
 				B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B59AF7681C4BED3D00ECFF04 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				B59AF7691C4BED4C00ECFF04 /* SetupViewController.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 		B5BFA7D31C4020BB00048621 /* Models */ = {
@@ -638,6 +649,7 @@
 				B597DCD31C429A2E00601CB1 /* ObservableHelpers.swift in Sources */,
 				B59AF7621C4B4BC200ECFF04 /* Facebook.swift in Sources */,
 				B597DCCF1C4209C700601CB1 /* Page.swift in Sources */,
+				B59AF76A1C4BED4C00ECFF04 /* SetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

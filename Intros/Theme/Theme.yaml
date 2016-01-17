@@ -18,3 +18,10 @@ $FacebookColor: '#3b5998'
 .SocialImportHighlighted:
     _superclass: .SocialImport
     backgroundColor: $PrimaryDarkColor
+
+.CheckBox:
+    onTintColor: $PrimaryColor
+    onCheckColor: $PrimaryColor
+
+.Label:
+    textColor: $PrimaryDarkColor
