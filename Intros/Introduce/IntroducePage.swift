@@ -1,11 +1,13 @@
 import Foundation
 import UIKit
+
 import Swinject
+import Prephirences
 
 final class IntroducePage: Page {
     static var container = Container(parent: AppSetup.rootContainer) { container in
         container.register(IntroduceViewModelType.self) { r in
-            let viewModel = IntroduceViewModel(userManager: r.resolve(UserManager.self)!)
+            let viewModel = IntroduceViewModel(userManager: r.resolve(UserManager.self)!, preferences: r.resolve(MutablePreferencesType.self)!)
             return viewModel
         }.inObjectScope(.None)
             

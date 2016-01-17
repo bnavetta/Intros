@@ -35,7 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // TODO: apple watch app to show code
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Log.info?.message("App launched");
+        Log.info?.message("App launched")
+        
+        setDefaultPreferences(AppSetup.preferences)
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         

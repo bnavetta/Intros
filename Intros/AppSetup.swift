@@ -2,6 +2,7 @@ import Foundation
 
 import Swinject
 import Motif
+import Prephirences
 
 class AppSetup {
     static var debug: Bool {
@@ -27,10 +28,16 @@ class AppSetup {
         #endif
     }()
     
+    // TODO: read-only prefs from file?
+    // https://github.com/phimage/Prephirences#composing
+    static let preferences: MutablePreferencesType = NSUserDefaults.standardUserDefaults()
+    
     static var rootContainer = Container { container in
         container.register(UserManager.self) { _ in UserManagerImpl() }
         
         container.register(ShareServiceType.self) { _ in ShareService() }
+        
+        container.register(MutablePreferencesType.self) { _ in AppSetup.preferences }
         
         container.register(MTFTheme.self) { _ in
             do {

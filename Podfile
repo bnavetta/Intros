@@ -17,6 +17,7 @@ pod 'NSObject+Rx'
 pod 'RxDataSources'
 
 pod 'Swinject'
+pod 'Prephirences'
 
 pod 'FBSDKLoginKit'
 pod 'FBSDKCoreKit'
@@ -29,6 +30,7 @@ pod 'Cartography'
 pod 'BEMCheckBox'
 pod 'FontAwesome.swift'
 pod 'Eureka'
+pod 'RazzleDazzle'
 
 target 'IntrosTests' do
 

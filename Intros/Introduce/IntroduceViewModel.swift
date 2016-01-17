@@ -1,8 +1,10 @@
 import Foundation
+
 import RxSwift
 import RxCocoa
 import Action
 import CleanroomLogger
+import Prephirences
 
 class ShareInfoViewModel {
     private let type: InformationType
@@ -18,9 +20,9 @@ class ShareInfoViewModel {
         return shareChecked.value && enabled.value
     }
     
-    init(type: InformationType) {
+    init(type: InformationType, share: Bool) {
         self.type = type
-        self.shareChecked = Variable(true)
+        self.shareChecked = Variable(share)
         self.enabled = Variable(true)
     }
 }
@@ -44,12 +46,13 @@ class IntroduceViewModel: NSObject, IntroduceViewModelType {
     private var user: User!
     
     private let userManager: UserManager
+    private let preferences: MutablePreferencesType
     
-    private let nameInfo = ShareInfoViewModel(type: .Name)
-    private let phoneNumberInfo = ShareInfoViewModel(type: .PhoneNumber)
-    private let facebookInfo = ShareInfoViewModel(type: .Facebook)
-    private let twitterInfo = ShareInfoViewModel(type: .Twitter)
-    private let snapchatInfo = ShareInfoViewModel(type: .Snapchat)
+    private let nameInfo: ShareInfoViewModel
+    private let phoneNumberInfo: ShareInfoViewModel
+    private let facebookInfo: ShareInfoViewModel
+    private let twitterInfo: ShareInfoViewModel
+    private let snapchatInfo: ShareInfoViewModel
     
     private let allInfo: [ShareInfoViewModel]
     
@@ -57,9 +60,18 @@ class IntroduceViewModel: NSObject, IntroduceViewModelType {
         return qrCodeSubject.asDriver(onErrorJustReturn: UIImage(named: "empty")!)
     }
     
-    init(userManager: UserManager) {
+    init(userManager: UserManager, preferences: MutablePreferencesType) {
         self.userManager = userManager
+        self.preferences = preferences
+        
+        self.nameInfo = ShareInfoViewModel(type: .Name, share: preferences.boolForKey(.ShareName))
+        self.phoneNumberInfo = ShareInfoViewModel(type: .PhoneNumber, share: preferences.boolForKey(.SharePhoneNumber))
+        self.facebookInfo = ShareInfoViewModel(type: .Facebook, share: preferences.boolForKey(.ShareFacebook))
+        self.twitterInfo = ShareInfoViewModel(type: .Twitter, share: preferences.boolForKey(.ShareTwitter))
+        self.snapchatInfo = ShareInfoViewModel(type: .Snapchat, share: preferences.boolForKey(.ShareSnapchat))
+        
         self.allInfo = [nameInfo, phoneNumberInfo, facebookInfo, twitterInfo, snapchatInfo]
+        
         super.init()
         initBindings()
     }
@@ -81,6 +93,26 @@ class IntroduceViewModel: NSObject, IntroduceViewModelType {
         // Instead of making shareables a variable so I can filter,
         // show all bits of information and just disable the checkbox on ones without
         // info (add another Variable<Bool> to Shareable)
+        
+        nameInfo.shareChecked.asDriver().driveNext { checked in
+            self.preferences.setBool(checked, forKey: .ShareName)
+        }.addDisposableTo(rx_disposeBag)
+        
+        phoneNumberInfo.shareChecked.asDriver().driveNext { checked in
+            self.preferences.setBool(checked, forKey: .SharePhoneNumber)
+        }.addDisposableTo(rx_disposeBag)
+        
+        facebookInfo.shareChecked.asDriver().driveNext { checked in
+            self.preferences.setBool(checked, forKey: .ShareFacebook)
+        }.addDisposableTo(rx_disposeBag)
+        
+        twitterInfo.shareChecked.asDriver().driveNext { checked in
+            self.preferences.setBool(checked, forKey: .ShareTwitter)
+        }.addDisposableTo(rx_disposeBag)
+        
+        snapchatInfo.shareChecked.asDriver().driveNext { checked in
+            self.preferences.setBool(checked, forKey: .ShareSnapchat)
+        }.addDisposableTo(rx_disposeBag)
         
         Observable.combineLatest(Observable.of(nameInfo, phoneNumberInfo, facebookInfo, twitterInfo, snapchatInfo)
             .map({ $0.shareChecked.asObservable() })
