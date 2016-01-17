@@ -3,6 +3,7 @@ import UIKit
 
 import CleanroomLogger
 import Motif
+import Eureka
 
 func initializeTheming() {
     UIView.mtf_registerThemeProperty("borderWidth", requiringValueOfClass: NSNumber.self) { width, view, _ in

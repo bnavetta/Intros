@@ -2,9 +2,11 @@ import Foundation
 import UIKit
 
 import Action
+import Motif
 
 class ScanCodeViewController: ViewController, UIGestureRecognizerDelegate {
     var viewModel: ScanCodeViewModelType!
+    var theme: MTFTheme!
     
     @IBOutlet
     weak var previewView: UIView!
@@ -17,7 +19,7 @@ class ScanCodeViewController: ViewController, UIGestureRecognizerDelegate {
         previewView.frame = view.frame
         previewView.layer.addSublayer(viewModel.previewLayer)
         
-        outlineView.layer.borderColor = UIColor.greenColor().CGColor
+        outlineView.layer.borderColor = theme.primaryLightColor.CGColor
         outlineView.layer.borderWidth = 2
         view.addSubview(outlineView)
         view.bringSubviewToFront(outlineView)

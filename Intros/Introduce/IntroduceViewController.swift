@@ -67,4 +67,9 @@ class IntroduceViewController: ViewController, UIPageViewControllerDataSource {
         addChildViewController(pageVC)
         view.addSubview(pageVC.view)
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.reload()
+    }
 }

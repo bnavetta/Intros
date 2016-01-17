@@ -54,6 +54,10 @@
 		B59AF7581C49F8F700ECFF04 /* EditUserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59AF7571C49F8F700ECFF04 /* EditUserPage.swift */; };
 		B59AF75A1C49F9B300ECFF04 /* EditUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59AF7591C49F9B300ECFF04 /* EditUser.storyboard */; };
 		B59AF75C1C49FA5400ECFF04 /* UserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59AF75B1C49FA5400ECFF04 /* UserFormViewController.swift */; };
+		B59AF75E1C4A0AEE00ECFF04 /* UserForm.yaml in Resources */ = {isa = PBXBuildFile; fileRef = B59AF75D1C4A0AEE00ECFF04 /* UserForm.yaml */; };
+		B59AF7601C4B49C900ECFF04 /* FacebookAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59AF75F1C4B49C900ECFF04 /* FacebookAccountCell.swift */; };
+		B59AF7621C4B4BC200ECFF04 /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59AF7611C4B4BC200ECFF04 /* Facebook.swift */; };
+		B59AF7641C4B51E900ECFF04 /* FacebookAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59AF7631C4B51E900ECFF04 /* FacebookAccountCell.xib */; };
 		B5AEE38B1C4545B3007557D0 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AEE38A1C4545B3007557D0 /* ShareService.swift */; };
 		B5BFA7D51C4020BB00048621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D41C4020BB00048621 /* User.swift */; };
 		B5BFA7D81C4021BD00048621 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFA7D71C4021BD00048621 /* UserManager.swift */; };
@@ -147,6 +151,10 @@
 		B59AF7571C49F8F700ECFF04 /* EditUserPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserPage.swift; sourceTree = "<group>"; };
 		B59AF7591C49F9B300ECFF04 /* EditUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditUser.storyboard; sourceTree = "<group>"; };
 		B59AF75B1C49FA5400ECFF04 /* UserFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFormViewController.swift; sourceTree = "<group>"; };
+		B59AF75D1C4A0AEE00ECFF04 /* UserForm.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserForm.yaml; sourceTree = "<group>"; };
+		B59AF75F1C4B49C900ECFF04 /* FacebookAccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAccountCell.swift; sourceTree = "<group>"; };
+		B59AF7611C4B4BC200ECFF04 /* Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
+		B59AF7631C4B51E900ECFF04 /* FacebookAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookAccountCell.xib; sourceTree = "<group>"; };
 		B5AEE38A1C4545B3007557D0 /* ShareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
 		B5BFA7D41C4020BB00048621 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5BFA7D71C4021BD00048621 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				B52C76971C470B5C00A1ACD1 /* Theme.yaml */,
+				B59AF75D1C4A0AEE00ECFF04 /* UserForm.yaml */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -340,6 +349,8 @@
 				B59AF7571C49F8F700ECFF04 /* EditUserPage.swift */,
 				B59AF7591C49F9B300ECFF04 /* EditUser.storyboard */,
 				B59AF75B1C49FA5400ECFF04 /* UserFormViewController.swift */,
+				B59AF75F1C4B49C900ECFF04 /* FacebookAccountCell.swift */,
+				B59AF7631C4B51E900ECFF04 /* FacebookAccountCell.xib */,
 			);
 			path = EditUser;
 			sourceTree = "<group>";
@@ -359,6 +370,7 @@
 				B597DCCA1C41CAB600601CB1 /* QRCodeGenerator.swift */,
 				B5749F081C44724F0064EBD5 /* QRCodeCapturer.swift */,
 				B5AEE38A1C4545B3007557D0 /* ShareService.swift */,
+				B59AF7611C4B4BC200ECFF04 /* Facebook.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -486,6 +498,7 @@
 			files = (
 				B597DCC31C41A80A00601CB1 /* Introduce.storyboard in Resources */,
 				B5749EFF1C4469F00064EBD5 /* Localizable.strings in Resources */,
+				B59AF75E1C4A0AEE00ECFF04 /* UserForm.yaml in Resources */,
 				B59AF7551C49B52E00ECFF04 /* Default-568h@2x.png in Resources */,
 				B597DCC71C41B14E00601CB1 /* ShareTableViewCell.xib in Resources */,
 				B5389BB41C3F68C800EA15D5 /* LaunchScreen.storyboard in Resources */,
@@ -494,6 +507,7 @@
 				B5389BB11C3F68C800EA15D5 /* Assets.xcassets in Resources */,
 				B52C76981C470B5C00A1ACD1 /* Theme.yaml in Resources */,
 				B5389BAF1C3F68C800EA15D5 /* Main.storyboard in Resources */,
+				B59AF7641C4B51E900ECFF04 /* FacebookAccountCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,9 +620,11 @@
 				B5749F071C4471E80064EBD5 /* ScanCodeViewModel.swift in Sources */,
 				B597DCD91C43583A00601CB1 /* IntroduceViewModel.swift in Sources */,
 				B5749F091C44724F0064EBD5 /* QRCodeCapturer.swift in Sources */,
+				B59AF7601C4B49C900ECFF04 /* FacebookAccountCell.swift in Sources */,
 				B597DCCB1C41CAB600601CB1 /* QRCodeGenerator.swift in Sources */,
 				B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */,
 				B597DCD31C429A2E00601CB1 /* ObservableHelpers.swift in Sources */,
+				B59AF7621C4B4BC200ECFF04 /* Facebook.swift in Sources */,
 				B597DCCF1C4209C700601CB1 /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

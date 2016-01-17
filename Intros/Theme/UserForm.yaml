@@ -1,0 +1,6 @@
+.FormTitle:
+    textColor: $PrimaryDarkColor
+    backgroundColor: $AccentColor
+
+.FirstNameTitle:
+    _superclass: .FormTitle

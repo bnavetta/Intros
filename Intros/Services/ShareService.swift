@@ -17,9 +17,18 @@ class ShareService: ShareServiceType {
     // https://stackoverflow.com/questions/15625447/ios-add-contact-into-contacts
     func shareContact(user: User) -> Observable<Void> {
         let contact = CNMutableContact()
-        contact.familyName = user.lastName
-        contact.givenName = user.firstName
-        contact.phoneNumbers = [CNLabeledValue(label: CNLabelPhoneNumberMobile, value: CNPhoneNumber(stringValue: user.phoneNumber))]
+        
+        if let firstName = user.firstName {
+            contact.givenName = firstName
+        }
+        
+        if let lastName = user.lastName {
+            contact.familyName = lastName
+        }
+        
+        if let phoneNumber = user.phoneNumber {
+            contact.phoneNumbers = [CNLabeledValue(label: CNLabelPhoneNumberMobile, value: CNPhoneNumber(stringValue: phoneNumber))]
+        }
         
         let controller = CNContactViewController(forNewContact: contact)
         controller.contactStore = self.contactStore
@@ -31,34 +40,31 @@ class ShareService: ShareServiceType {
                 ViewControllerHolder.instance.popViewController(true)
             }
             .take(1)
-//            .flatMap {_ in
-//                return Observable<Void>.create { observer in
-//                    ViewControllerHolder.instance.dismissViewController(true) {
-//                        observer.onCompleted()
-//                    }
-//                }
-//                
-////                navigationController.dismissViewControllerAnimated(true, completion: nil)
-////                ViewControllerHolder.instance.dismissViewController(true) {
-////                    print("It went away?")
-////                }
-//            }
-//            .take(1)
     }
     
     func shareFacebook(user: User) {
-        openURL(NSURL(string: "fb://profile/\(user.facebookId)")!)
+        if let facebookId = user.facebookId {
+            openURL("fb://profile?app_scoped_user_id=\(facebookId)")
+        }
     }
     
     func shareTwitter(user: User) {
-        openURL(NSURL(string: "twitter://user?screen_name=\(user.twitterHandle)")!)
+        if let twitterHandle = user.twitterHandle {
+            openURL("twitter://user?screen_name=\(twitterHandle)")
+        }
     }
     
     func shareSnapchat(user: User) {
-        openURL(NSURL(string: "snapchat://?u=\(user.snapchatUsername)")!)
+        if let snapchatUsername = user.snapchatUsername {
+            openURL("snapchat://?u=\(snapchatUsername)")
+        }
     }
     
-    private func openURL(url: NSURL) -> Bool {
+    private func openURL(url: String) -> Bool {
+        guard let url = NSURL(string: url) else {
+            return false
+        }
+        
         if UIApplication.sharedApplication().canOpenURL(url) {
             return UIApplication.sharedApplication().openURL(url)
         }

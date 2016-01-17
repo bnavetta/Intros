@@ -13,6 +13,7 @@ final class ReceiveIntroductionPage: Page {
         
         container.registerForStoryboard(ScanCodeViewController.self) { r, controller in
             controller.viewModel = r.resolve(ScanCodeViewModelType.self)!
+            controller.theme = r.resolve(MTFTheme.self)
         }
         
         container.registerForStoryboard(ImportInformationViewController.self) { r, controller in

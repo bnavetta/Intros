@@ -1,6 +1,7 @@
 import Foundation
+
 import FileKit
-import RxSwift
+import CleanroomLogger
 
 private func applicationSupport() -> Path {
     return NSSearchPathForDirectoriesInDomains(.ApplicationSupportDirectory, .UserDomainMask, true)
@@ -19,11 +20,8 @@ extension BNIUser {
 }
 
 protocol UserManager {
-    func loadUser(scheduler: SchedulerType) -> Observable<User>
-    func saveUser(user: User, scheduler: SchedulerType) -> Observable<()>
-    
-    func loadUserSync() throws -> User
-    func saveUserSync(user: User) throws
+    func loadUser() -> User?
+    func saveUser(user: User) -> Bool
 }
 
 final class UserManagerImpl: UserManager {
@@ -33,50 +31,28 @@ final class UserManagerImpl: UserManager {
         return DataFile(path: userFilePath);
     }
     
-    func loadUserSync() throws -> User {
-        let data = try self.userFile.read()
-        let userProto = try BNIUser.parseData(data)
-        return User.fromProto(userProto)
-    }
-    
-    func saveUserSync(user: User) throws {
-        try self.userFilePath.parent.createDirectory(withIntermediateDirectories: true)
-        let data = user.toProto().data()!
-        try data |> self.userFile
-    }
-    
-    func loadUser(scheduler: SchedulerType) -> Observable<User> {
-        return Observable.create { observer in
-            return scheduler.schedule(()) {_ in
-                do {
-                    observer.onNext(try self.loadUserSync())
-                    observer.onCompleted()
-                }
-                catch let e {
-                    observer.onError(e)
-                }
-                
-                return NopDisposable.instance
-            }
+    func loadUser() -> User? {
+        do {
+            let data = try self.userFile.read()
+            let userProto = try BNIUser.parseData(data)
+            return User.fromProto(userProto)
         }
-        .observeOn(MainScheduler.instance)
+        catch let e {
+            Log.error?.message("Error loading user: \(e)")
+            return nil
+        }
     }
     
-    func saveUser(user: User, scheduler: SchedulerType) -> Observable<Void> {
-        return Observable.create { observer in
-            return scheduler.schedule(user) { user in
-                do {
-                    try self.saveUserSync(user)
-                    observer.onNext(())
-                    observer.onCompleted()
-                }
-                catch let e {
-                    observer.onError(e)
-                }
-                
-                return NopDisposable.instance
-            }
+    func saveUser(user: User) -> Bool {
+        do {
+            try self.userFilePath.parent.createDirectory(withIntermediateDirectories: true)
+            let data = user.toProto().data()!
+            try data |> self.userFile
+            return true
         }
-        .observeOn(MainScheduler.instance)
+        catch let e {
+            Log.error?.message("Error saving user: \(e)")
+            return false
+        }
     }
 }

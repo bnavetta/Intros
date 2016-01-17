@@ -34,7 +34,7 @@ class AppSetup {
         
         container.register(MTFTheme.self) { _ in
             do {
-                return try MTFTheme(fromFileNamed: "Theme")
+                return try MTFTheme(fromFilesNamed: ["Theme", "UserForm"])
             }
             catch let e {
                 fatalError("Cannot load theme: \(e)")

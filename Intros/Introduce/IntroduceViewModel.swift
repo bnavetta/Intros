@@ -30,6 +30,8 @@ protocol IntroduceViewModelType {
     
     var shareInfoCount: Int { get }
     
+    func reload()
+    
     func shareInfoAtIndexPath(indexPath: NSIndexPath) -> ShareInfoViewModel
     
     func setQrCodeScale(scale: CGFloat)
@@ -75,28 +77,28 @@ class IntroduceViewModel: NSObject, IntroduceViewModelType {
     }
     
     private func initBindings() {
-        userManager.loadUser(ConcurrentDispatchQueueScheduler.backgroundInstance).subscribeNext { user in
-            self.user = user
-            
-            // Instead of making shareables a variable so I can filter,
-            // show all bits of information and just disable the checkbox on ones without 
-            // info (add another Variable<Bool> to Shareable)
-            
-            self.nameInfo.enabled.value = user.hasInfo(.Name)
-            self.phoneNumberInfo.enabled.value = user.hasInfo(.PhoneNumber)
-            self.facebookInfo.enabled.value = user.hasInfo(.Facebook)
-            self.twitterInfo.enabled.value = user.hasInfo(.Twitter)
-            self.snapchatInfo.enabled.value = user.hasInfo(.Snapchat)
-            
-            Observable.combineLatest(Observable.of(self.nameInfo, self.phoneNumberInfo, self.facebookInfo, self.twitterInfo, self.snapchatInfo)
-                .map({ $0.shareChecked.asObservable() })
-                .merge(), self.qrCodeScale.asObservable()) {_, _ in return Void() }
-                .subscribeNext { _ in
-                    self.updateCode()
-                }
-                .addDisposableTo(self.rx_disposeBag)
-        }
-        .addDisposableTo(rx_disposeBag)
+        reload()
+        // Instead of making shareables a variable so I can filter,
+        // show all bits of information and just disable the checkbox on ones without
+        // info (add another Variable<Bool> to Shareable)
+        
+        Observable.combineLatest(Observable.of(nameInfo, phoneNumberInfo, facebookInfo, twitterInfo, snapchatInfo)
+            .map({ $0.shareChecked.asObservable() })
+            .merge(), qrCodeScale.asObservable()) {_, _ in return Void() }
+            .subscribeNext { _ in
+                self.updateCode()
+            }
+            .addDisposableTo(self.rx_disposeBag)
+    }
+    
+    func reload() {
+        self.user = userManager.loadUser()
+        
+        nameInfo.enabled.value = user.firstName != nil || user.lastName != nil
+        phoneNumberInfo.enabled.value = user.phoneNumber != nil
+        facebookInfo.enabled.value = user.facebookId != nil
+        twitterInfo.enabled.value = user.twitterHandle != nil
+        snapchatInfo.enabled.value = user.snapchatUsername != nil
     }
     
     private func updateCode() {

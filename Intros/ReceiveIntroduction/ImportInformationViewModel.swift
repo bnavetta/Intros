@@ -22,19 +22,19 @@ class ImportInformationViewModel: ImportInformationViewModelType {
         self.shareService = shareService
         var items = [SocialImportItem]()
         
-        if user.hasInfo(.Name) || user.hasInfo(.PhoneNumber) {
+        if user.firstName != nil || user.lastName != nil || user.phoneNumber != nil {
             items.append(SocialImportItem(socialInfo: .Contact, icon: UIImage.fontAwesomeIconWithName(.UserPlus, textColor: theme.accentColor, size: CGSizeMake(100, 100), backgroundColor: UIColor.clearColor())))
         }
         
-        if user.hasInfo(.Facebook) {
+        if user.facebookId != nil {
             items.append(SocialImportItem(socialInfo: .Facebook, icon: UIImage(named: "fb-square")!))
         }
         
-        if user.hasInfo(.Twitter) {
+        if user.twitterHandle != nil {
             items.append(SocialImportItem(socialInfo: .Twitter, icon: UIImage(named: "twitter")!))
         }
         
-        if user.hasInfo(.Snapchat) {
+        if user.snapchatUsername != nil {
             items.append(SocialImportItem(socialInfo: .Snapchat, icon: UIImage(named: "snap-ghost")!))
         }
         

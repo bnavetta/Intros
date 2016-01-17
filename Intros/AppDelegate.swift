@@ -7,7 +7,9 @@
 //
 
 import UIKit
+
 import RxSwift
+import Motif
 import CleanroomLogger
 import NSObject_Rx
 import FBSDKCoreKit
@@ -37,12 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        userManager.saveUser(User.testInstance, scheduler: MainScheduler.instance)
-            .subscribe()
-            .addDisposableTo(rx_disposeBag)
-
-        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let theme = AppSetup.rootContainer.resolve(MTFTheme.self)!
+        window?.tintColor = theme.primaryColor
         
         let pagedViewController = PagedViewController(pages: [
             IntroducePage(), ReceiveIntroductionPage(), EditUserPage()
