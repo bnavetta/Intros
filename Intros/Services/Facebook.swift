@@ -33,10 +33,10 @@ class RxFacebookLoginDelegate: NSObject, FBSDKLoginButtonDelegate {
 }
 
 struct Facebook {
-    static func requestProfile() -> Observable<AnyObject> {
+    static func requestProfile(fields: [String] = ["id", "name"]) -> Observable<AnyObject> {
         return Observable.create { observer in
             if let _ = FBSDKAccessToken.currentAccessToken() {
-                let request = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+                let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": fields])
                 let conn = request.startWithCompletionHandler { connection, result, error in
                     if error == nil {
                         observer.onNext(result)
