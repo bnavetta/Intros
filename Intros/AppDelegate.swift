@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     override init() {
         if AppSetup.devMode {
-            Log.enable(.Debug, synchronousMode: true)
+            Log.enable(verboseDebugMode: true)
             
             let debugger = PDDebugger.defaultInstance()
             debugger.autoConnect()
