@@ -20,6 +20,8 @@ PODS:
   - Keys (1.0.0)
   - NSObject+Rx (1.2.0):
     - RxSwift (~> 2.0.0)
+  - PonyDebugger (0.4.5):
+    - SocketRocket
   - Prephirences (2.0.8):
     - Prephirences/Core (= 2.0.8)
     - Prephirences/Keys (= 2.0.8)
@@ -34,6 +36,7 @@ PODS:
     - RxCocoa (~> 2.0)
     - RxSwift (~> 2.0)
   - RxSwift (2.0.0)
+  - SocketRocket (0.4.2)
   - Swinject (1.0.0)
 
 DEPENDENCIES:
@@ -47,6 +50,7 @@ DEPENDENCIES:
   - FontAwesome.swift
   - Keys (from `Pods/CocoaPodsKeys`)
   - NSObject+Rx
+  - PonyDebugger
   - Prephirences
   - Protobuf (~> 3.0.0-alpha-3)
   - RazzleDazzle
@@ -71,12 +75,14 @@ SPEC CHECKSUMS:
   FontAwesome.swift: c6e30a1a81716306ff9c81f2d38dda88ac5b8294
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   NSObject+Rx: 552d0a5bb78087b0faf9f8a066148577f1231426
+  PonyDebugger: 1c60f7c876bdb6a8b6bf0f0269087f8a234fafa7
   Prephirences: d22ced2a497fc7f2ee64b5f19cd6286251d0293e
   Protobuf: f6e2be538e98cf00d9c00b276a32b7995b1f0328
   RazzleDazzle: 022270e9ec0a4269ed40a6dcee42c8fa969cbc9a
   RxCocoa: b0ebd70b4f7450bdb3c8987b122f8fd568dc1e2f
   RxDataSources: 09a9230e8e39b5c5df49b7d63e29c2262ebb5cca
   RxSwift: d83246efa6f16c50c143bec134649d045498f601
+  SocketRocket: ffe08119b00ef982f6c37052a4705a057c8494ad
   Swinject: f1ec058cc1809929fd5b962c3a8a8277827389b6
 
 COCOAPODS: 0.39.0

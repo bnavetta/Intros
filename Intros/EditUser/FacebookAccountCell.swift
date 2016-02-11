@@ -6,8 +6,6 @@ import FBSDKLoginKit
 import CleanroomLogger
 
 public class FacebookAccountCell: Cell<String>, CellType {
-    private var loginDelegate: RxFacebookLoginDelegate!
-    
     @IBOutlet
     weak var loginButton: FBSDKLoginButton!
     
@@ -16,11 +14,7 @@ public class FacebookAccountCell: Cell<String>, CellType {
         super.setup()
         selectionStyle = .None
         
-        self.loginDelegate = RxFacebookLoginDelegate()
-        
-        loginButton.delegate = loginDelegate
-        
-        loginDelegate.rx_result.subscribeNext { result in
+        loginButton.rx_login.subscribeNext { result in
             if !result.isCancelled {
                 
 //                FBSDKAccessToken.setCurrentAccessToken(result.token)
@@ -40,7 +34,7 @@ public class FacebookAccountCell: Cell<String>, CellType {
         }
         .addDisposableTo(rx_disposeBag)
         
-        loginDelegate.rx_logout.subscribeNext { _ in
+        loginButton.rx_logout.subscribeNext { _ in
             self.row.value = nil
         }
         .addDisposableTo(rx_disposeBag)

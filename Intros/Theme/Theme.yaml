@@ -25,3 +25,22 @@ $FacebookColor: '#3b5998'
 
 .Label:
     textColor: $PrimaryDarkColor
+
+.IntroTextField:
+    # backgroundColor: $AccentColor
+    backgroundColor: transparent
+    # textColor: $PrimaryDarkColor
+    textColor: $AccentColor
+    font: 34
+
+.DoneButton:
+    borderWidth: 1
+    cornerRadius: 5
+    contentEdgeInsets: [10, 20]
+    tintColor: $PrimaryDarkColor
+    titleColor: $AccentColor
+    borderColor: $PrimaryDarkColor
+    titleText: .ButtonText
+
+.ButtonText:
+    font: 30

@@ -31,15 +31,24 @@ func initializeTheming() {
         return true
     }
     
-    UIButton.mtf_registerThemeProperty("titleText", requiringValueOfClass: MTFTheme.self) { cls, button, errPointer in
+    UIButton.mtf_registerThemeProperty("titleText", requiringValueOfClass: MTFThemeClass.self) { cls, button, errPointer in
         do {
-            try (cls as! MTFThemeClass).applyTo(button)
+            try (cls as! MTFThemeClass).applyTo(button.titleLabel!!)
             return true
         }
         catch let e as NSError {
             errPointer.memory = e
             return false
         }
+    }
+    
+    UIButton.mtf_registerThemeProperty("titleColor", requiringValueOfClass: UIColor.self) { color, button, _ in
+        button.setTitleColor(color as? UIColor, forState: .Normal)
+        return true
+    }
+    
+    NSValueTransformer.mtf_registerValueTransformerWithName("BNISystemFontTransformer", transformedValueClass: UIFont.self, reverseTransformedValueClass: NSNumber.self) { value, errorPointer in
+        return UIFont.systemFontOfSize(CGFloat(value.floatValue))
     }
 }
 

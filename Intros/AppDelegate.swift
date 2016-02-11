@@ -13,6 +13,7 @@ import Motif
 import CleanroomLogger
 import NSObject_Rx
 import FBSDKCoreKit
+import PonyDebugger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         if AppSetup.devMode {
             Log.enable(.Debug, synchronousMode: true)
+            
+            let debugger = PDDebugger.defaultInstance()
+            debugger.autoConnect()
+            debugger.enableViewHierarchyDebugging()
         }
         else {
             Log.enable()
@@ -49,7 +54,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let pagedViewController = PagedViewController(pages: [
             IntroducePage(), ReceiveIntroductionPage(), EditUserPage()
             ], initialIndex: 0)
-        window?.rootViewController = pagedViewController
+        
+//        AppSetup.preferences.setBool(false, forKey: .IsSetUp)
+        if !AppSetup.preferences.hasObjectForKey(.IsSetUp) || !AppSetup.preferences.boolForKey(.IsSetUp) {
+            let setupVC = SetupPage().createViewController() as! SetupViewController
+            setupVC.onComplete = { user in
+                AppSetup.preferences.setBool(true, forKey: .IsSetUp)
+                AppSetup.rootContainer.resolve(UserManager.self)!.saveUser(user)
+                self.window?.rootViewController = pagedViewController
+            }
+            window?.rootViewController = setupVC
+        }
+        else {
+            window?.rootViewController = pagedViewController
+        }
         
         window?.makeKeyAndVisible()
         

@@ -33,6 +33,10 @@
 		B5749F071C4471E80064EBD5 /* ScanCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749F061C4471E80064EBD5 /* ScanCodeViewModel.swift */; };
 		B5749F091C44724F0064EBD5 /* QRCodeCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749F081C44724F0064EBD5 /* QRCodeCapturer.swift */; };
 		B5749F0B1C44A89C0064EBD5 /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5749F0A1C44A89C0064EBD5 /* ScanCodeViewController.swift */; };
+		B58555851C4BFD1500405915 /* SetupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58555841C4BFD1500405915 /* SetupPage.swift */; };
+		B58555871C4BFDA400405915 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58555861C4BFDA400405915 /* Setup.storyboard */; };
+		B58555891C4BFEA500405915 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58555881C4BFEA500405915 /* Helpers.swift */; };
+		B585558B1C4C1CE700405915 /* FBSDKLoginButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585558A1C4C1CE700405915 /* FBSDKLoginButton+Rx.swift */; };
 		B58F9ACF1C403E0C000E95A5 /* CleanroomASL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */; };
 		B58F9AD01C403E0C000E95A5 /* CleanroomASL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B58F9AD11C403E0C000E95A5 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */; };
@@ -134,6 +138,10 @@
 		B5749F061C4471E80064EBD5 /* ScanCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCodeViewModel.swift; sourceTree = "<group>"; };
 		B5749F081C44724F0064EBD5 /* QRCodeCapturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCapturer.swift; sourceTree = "<group>"; };
 		B5749F0A1C44A89C0064EBD5 /* ScanCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
+		B58555841C4BFD1500405915 /* SetupPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupPage.swift; sourceTree = "<group>"; };
+		B58555861C4BFDA400405915 /* Setup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
+		B58555881C4BFEA500405915 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		B585558A1C4C1CE700405915 /* FBSDKLoginButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FBSDKLoginButton+Rx.swift"; sourceTree = "<group>"; };
 		B58F9ACD1C403E0C000E95A5 /* CleanroomASL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomASL.framework; path = Carthage/Build/iOS/CleanroomASL.framework; sourceTree = "<group>"; };
 		B58F9ACE1C403E0C000E95A5 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		B58F9AD61C403F76000E95A5 /* PrepareIntroductionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareIntroductionViewModel.swift; sourceTree = "<group>"; };
@@ -343,6 +351,8 @@
 				B52C768F1C45624100A1ACD1 /* CNContactViewController+Rx.swift */,
 				B52C76991C470C1500A1ACD1 /* Theming.swift */,
 				B52C769B1C4758A400A1ACD1 /* UICollectionView+Rx.swift */,
+				B58555881C4BFEA500405915 /* Helpers.swift */,
+				B585558A1C4C1CE700405915 /* FBSDKLoginButton+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -372,6 +382,8 @@
 		B59AF7681C4BED3D00ECFF04 /* Setup */ = {
 			isa = PBXGroup;
 			children = (
+				B58555841C4BFD1500405915 /* SetupPage.swift */,
+				B58555861C4BFDA400405915 /* Setup.storyboard */,
 				B59AF7691C4BED4C00ECFF04 /* SetupViewController.swift */,
 			);
 			path = Setup;
@@ -519,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B597DCC31C41A80A00601CB1 /* Introduce.storyboard in Resources */,
+				B58555871C4BFDA400405915 /* Setup.storyboard in Resources */,
 				B5749EFF1C4469F00064EBD5 /* Localizable.strings in Resources */,
 				B59AF75E1C4A0AEE00ECFF04 /* UserForm.yaml in Resources */,
 				B59AF7551C49B52E00ECFF04 /* Default-568h@2x.png in Resources */,
@@ -615,6 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B585558B1C4C1CE700405915 /* FBSDKLoginButton+Rx.swift in Sources */,
 				B58F9ADC1C40487D000E95A5 /* PrepareIntroductionViewController.swift in Sources */,
 				B597DCC91C41C17500601CB1 /* DataBinding.swift in Sources */,
 				B5AEE38B1C4545B3007557D0 /* ShareService.swift in Sources */,
@@ -635,6 +649,7 @@
 				B59AF7581C49F8F700ECFF04 /* EditUserPage.swift in Sources */,
 				B5734DE01C455E410053BD8A /* ImportInformationViewModel.swift in Sources */,
 				B597DCC51C41AA5000601CB1 /* BEMCheckBox+Rx.swift in Sources */,
+				B58555851C4BFD1500405915 /* SetupPage.swift in Sources */,
 				B597DCD11C421F2A00601CB1 /* ConcurrentDispatchQueueScheduler+StandardQueues.swift in Sources */,
 				B597DCCD1C42073B00601CB1 /* IntroducePage.swift in Sources */,
 				B5389BDD1C400ECB00EA15D5 /* QRCaptureViewController.swift in Sources */,
@@ -644,6 +659,7 @@
 				B597DCD91C43583A00601CB1 /* IntroduceViewModel.swift in Sources */,
 				B5749F091C44724F0064EBD5 /* QRCodeCapturer.swift in Sources */,
 				B59AF7601C4B49C900ECFF04 /* FacebookAccountCell.swift in Sources */,
+				B58555891C4BFEA500405915 /* Helpers.swift in Sources */,
 				B597DCCB1C41CAB600601CB1 /* QRCodeGenerator.swift in Sources */,
 				B5389BAA1C3F68C800EA15D5 /* AppDelegate.swift in Sources */,
 				B597DCD31C429A2E00601CB1 /* ObservableHelpers.swift in Sources */,

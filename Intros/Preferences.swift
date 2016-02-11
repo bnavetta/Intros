@@ -2,6 +2,8 @@ import Foundation
 import Prephirences
 
 enum Preference: String {
+    case IsSetUp
+    
     case ShareName
     case SharePhoneNumber
     case ShareFacebook

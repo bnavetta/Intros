@@ -32,6 +32,8 @@ pod 'FontAwesome.swift'
 pod 'Eureka'
 pod 'RazzleDazzle'
 
+pod 'PonyDebugger'
+
 target 'IntrosTests' do
 
 end
